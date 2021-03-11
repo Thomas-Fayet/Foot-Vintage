@@ -1,0 +1,76 @@
+/* La propriété border box nous permettra d'ajouter du padding et des bordures à nos éléments sans incrémenter leur taille /
+html
+{
+    box-sizing: border-box;
+}
+
+/ On fait hériter le border-box de notre sélecteur html à l'ensemble des autres sélecteurs */
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body
+{
+    margin: 0;
+}
+
+h1, h2, p, ul
+{
+    margin: 0;
+    padding: 0;
+}
+
+h2{
+    text-align:center;
+    background-color:white;
+    margin-top:30px;
+}
+
+.home-wrapper{
+    width:90%;
+    margin: 0 auto;
+}
+
+.news-block{
+    background-color:green;
+    margin-bottom:30px;
+    height:400px;
+}
+
+.championship-wrapper{
+    background-color:green;
+}
+
+.championship-boxes{
+    background-color:blue;
+    border-radius: 12px;
+    width:100%;
+    height:300px;
+    margin-bottom:30px;
+}
+
+.country-player-wrapper{
+    background-color:green;
+}
+
+.country-player-block{
+    background-color:blue;
+    height:300px;
+    margin-bottom:20px;
+}
+
+/* --- RESPONSIVE --- */
+
+@media (min-width:425px){
+    .championship-wrapper{
+        display:flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    .championship-boxes{
+        width:48%;
+    }
+}
