@@ -22,43 +22,79 @@ h1, h2, p, ul
     padding: 0;
 }
 
-h2{
-    text-align:center;
-    background-color:white;
-    margin-top:30px;
-}
+/* ------------------------------------------- HOMEPAGE ------------------------------------------------------*/
 
-.home-wrapper{
+.main-wrapper{
     width:90%;
     margin: 0 auto;
 }
 
-.news-block{
-    background-color:green;
-    margin-bottom:30px;
-    height:400px;
+.title-boxes{
+    text-align: center;
+    background-color:white;
+    width: 150px;
+    padding:4px 0;
+    margin: 30px auto 0 auto;
 }
 
-.championship-wrapper{
-    background-color:green;
+.news-title{
+    width: 200px;
+}
+
+.news-block{
+    margin-bottom:30px;
+    height:400px;
+    display:flex;
+    flex-direction: column;
+    background-color:blue;
 }
 
 .championship-boxes{
     background-color:blue;
     border-radius: 12px;
-    width:100%;
     height:300px;
     margin-bottom:30px;
 }
 
+.championship-one{
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.10), rgba(0, 0, 0, 0.10)), url('../img/ligue1-logo.webp');
+    background-size: cover;
+}
+
+.championship-two{
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.10), rgba(0, 0, 0, 0.10)), url('../img/seriea.webp');
+    background-size: cover;
+}
+
+.championship-three{
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.10), rgba(0, 0, 0, 0.10)), url('../img/bpl.webp');
+    background-size: cover;
+}
+
+.championship-four{
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.10), rgba(0, 0, 0, 0.10)), url('../img/liga.webp');
+    background-size: cover;
+}
+
 .country-player-wrapper{
-    background-color:green;
+    display:flex;
+    flex-direction: column;
 }
 
 .country-player-block{
-    background-color:blue;
     height:300px;
-    margin-bottom:20px;
+    margin-bottom:30px;
+    border-radius: 12px;
+}
+
+.country-block{
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.10), rgba(0, 0, 0, 0.10)), url('../img/france.webp');
+    background-size: cover;
+}
+
+.player-block{
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.10), rgba(0, 0, 0, 0.10)), url('../img/ronaldinho.webp');
+    background-size: cover;
 }
 
 /* --- RESPONSIVE --- */
@@ -72,5 +108,43 @@ h2{
 
     .championship-boxes{
         width:48%;
+    }
+}
+
+@media (min-width:768px){
+    .news-title{
+        width:300px;
+    }
+}
+
+@media (min-width:1024px){
+    .main-wrapper{
+        width:85%;
+    }
+}
+
+@media (min-width:1440px){
+    .main-wrapper{
+        width:1200px;
+    }
+
+    .championship-boxes{
+        width:22%;
+    }
+
+    .country-player-wrapper{
+        display:flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .country-player-block{
+        width:48%;
+    }
+}
+
+@media (min-width:1800px){
+    .main-wrapper{
+        width:70%;
     }
 }
