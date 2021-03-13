@@ -1,7 +1,13 @@
+<div class="header-top">
+    <h1 class="header-logo">foot vintage</h1>
+
+
+</div>
+
+
 <nav class="nav">
-    <a class="nav-link" href="index.php">Accueil</a>
-    <a class="nav-link" href="inscription.php">Inscription</a>
-    <a class="nav-link" href="login.php">Login</a>
-    <a class="nav-link" href="profil.php">Profil</a>
-    <a class="nav-link" href="panier.php">Panier</a>
+    <a class="nav-link" href="#">Nouveautés</a>
+    <a class="nav-link" href="#">Selections</a>
+    <a class="nav-link" href="#">Clubs</a>
+    <a class="nav-link" href="#">Joueurs</a>
 </nav>
