@@ -22,6 +22,46 @@ h1, h2, p, ul
     padding: 0;
 }
 
+/* ---------------------------------NAVIGATION--------------------------------------------------------------- */
+
+.header-top
+{
+    height: 130px;
+    background-color: black;
+}
+
+.header-logo
+{
+    color: white;
+    font-size: 48px;
+    text-transform: uppercase;
+    font-family: 'Aldrich', sans-serif;
+}
+
+
+.nav
+{
+    width: 90%;
+    margin: auto;
+    margin-bottom: 80px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.nav-link
+{
+    font-size: 24px;
+    color: black;
+    text-transform: uppercase;
+    transition: 0.8s;
+}
+
+.nav-link:hover
+{
+    color: white;
+    background-color: black;
+}
+
 /* ------------------------------------------- HOMEPAGE ------------------------------------------------------*/
 
 .main-wrapper{
@@ -108,5 +148,43 @@ h1, h2, p, ul
 
     .championship-boxes{
         width:48%;
+    }
+}
+
+@media (min-width:768px){
+    .news-title{
+        width:300px;
+    }
+}
+
+@media (min-width:1024px){
+    .main-wrapper{
+        width:85%;
+    }
+}
+
+@media (min-width:1440px){
+    .main-wrapper{
+        width:1200px;
+    }
+
+    .championship-boxes{
+        width:22%;
+    }
+
+    .country-player-wrapper{
+        display:flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .country-player-block{
+        width:48%;
+    }
+}
+
+@media (min-width:1800px){
+    .main-wrapper{
+        width:70%;
     }
 }
