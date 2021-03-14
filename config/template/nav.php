@@ -21,8 +21,8 @@
         <input class="menu-btn" type="checkbox" id="menu-btn" />
         <label class="menu-icon" for="menu-btn"><span class="navicon"></span></label>
 
-        <nav class="nav">
-        <div class="nav-link-icon">
+        <nav class="nav-burger">
+            <div class="nav-link-icon">
                 <a href="#">
                     <svg class="icon icon-burger icon-user">
                         <use xlink:href="#icon-user"></use>
@@ -34,7 +34,7 @@
                     </svg>
                 </a>
             </div>
-            
+
             <a class="nav-link" href="#">Nouveautés</a>
             <a class="nav-link" href="#">Selections</a>
             <a class="nav-link" href="#">Clubs</a>
@@ -65,3 +65,10 @@
         </a>
     </div>
 </div>
+
+<nav class="nav-desktop">
+    <a class="nav-link" href="#">Nouveautés</a>
+    <a class="nav-link" href="#">Selections</a>
+    <a class="nav-link" href="#">Clubs</a>
+    <a class="nav-link" href="#">Joueurs</a>
+</nav>
