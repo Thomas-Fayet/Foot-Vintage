@@ -22,7 +22,28 @@ h1, h2, p, ul
     padding: 0;
 }
 
-/* ---------------------------------NAVIGATION--------------------------------------------------------------- */
+/* --------------------------------- STYLE TEXTE --------------------------------------------------------------- */
+
+h1
+{
+    color: white;
+    text-transform: uppercase;
+    font-family: 'Aldrich', sans-serif;
+}
+
+h2
+{
+    color: white;
+    text-transform: uppercase;
+    font-family: 'Aldrich', sans-serif;
+}
+
+.nav-link
+{
+    font-family: 'Aldrich', sans-serif;
+}
+
+/* --------------------------------- NAVIGATION --------------------------------------------------------------- */
 
 
 
@@ -161,9 +182,6 @@ h1, h2, p, ul
     display: flex;
     flex-direction: row;
     align-items: center;
-    color: white;
-    text-transform: uppercase;
-    font-family: 'Aldrich', sans-serif;
 }
 
 .header-logo h1
@@ -361,6 +379,92 @@ h1, h2, p, ul
     margin: 10px 0px 10px 10px;
 }
 
+/* ------------------------------------------- FOOTER ------------------------------------------------------*/
+
+footer
+{
+    display: flex;
+    flex-direction: column;
+    background-color: black;
+}
+
+.footer-logo
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer-logo h1
+{
+    margin-right: 10px;
+}
+
+.footer-nav
+{
+    display: flex;
+    flex-direction: column;
+}
+
+.nav-link-footer
+{
+    margin-top: 20px;
+    text-align: center;
+    text-transform: uppercase;
+    color: white;
+    font-size: 18px;
+}
+
+.nav-link-footer:hover
+{
+    color: red;
+}
+
+footer h2
+{
+    margin-top: 30px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.footer-social-icon
+{
+    display: flex;
+    justify-content: center;
+}
+
+.footer-social-icon .icon-link
+{
+    margin: 0px 15px;
+}
+
+.icon-footer
+{
+    height: 3em;
+    width: 3em;
+}
+
+.icon-footer:hover
+{
+    fill: red;
+}
+
+.footer-payment-icon
+{
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+}
+
+.icon-payment
+{
+    margin: 0px 15px;
+    height: 2.5em;
+    width: 2.5em;
+}
+
+
+
 
 
 /* --- RESPONSIVE --- */
@@ -504,6 +608,11 @@ h1, h2, p, ul
     .header-icon
     {
         margin-right: calc(15%);
+    }
+
+    .products-wrapper
+    {
+        grid-template-columns: repeat(3, 262px);
     }
 }
 
