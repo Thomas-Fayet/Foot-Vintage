@@ -49,6 +49,8 @@
             
         </section>
     </main>
-    <!-- <?php include 'config/template/footer.php'; ?> -->
+    <footer>
+        <?php include 'config/template/footer.php'; ?>
+    </footer>
 </body>
 </html>
