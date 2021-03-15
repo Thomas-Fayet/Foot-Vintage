@@ -16,7 +16,7 @@ body
     margin: 0;
 }
 
-h1, h2, p, ul
+h1, h2, h3, h4, p, ul
 {
     margin: 0;
     padding: 0;
@@ -137,6 +137,7 @@ h1, h2, p, ul
     background-size: cover;
 }
 
+
 /* --- RESPONSIVE --- */
 
 @media (min-width:425px){
@@ -189,9 +190,107 @@ h1, h2, p, ul
     }
 }
 
-<<<<<<< HEAD
-/* uuuuuuuuuuuuuuuuuuuhuhuhuhuhuhuhuhuhuhuhuhuhu  ushushjshfjshfjshfjhsfjhsjhs */
-=======
-/** UUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUU */
-/* uuuuuuuuuuuuuuuuuuuhuhuhuhuhuhuhuhuhuhuhuhuhu */
->>>>>>> ce9d398cc3cd35d517b66d803ea8ab28174858e1
+/* ---------------------------------------------------- FICHE PRODUIT -------------------------------------------------------*/
+
+.product-container{
+    margin-top:60px;
+    display:flex;
+    flex-direction: column;
+    /* flex-wrap: wrap;
+    justify-content: space-evenly; responsive */
+}
+
+.product-big-picture{
+    width:250px;
+    margin: 0 auto 30px auto;
+}
+
+.product-big-picture img{
+    width:100%;
+}
+
+.product-more-container{
+    margin:0 auto 30px auto;
+}
+
+.product-more-picture{
+    width:70px;
+}
+
+.product-size{
+    margin-bottom:20px;
+    background-color:white;
+    border: 1px solid black;
+}
+
+.product-price{
+    margin-bottom:20px;
+}
+
+.add-to-cart{
+    background-color:white;
+    border: 2px solid black;
+    margin-bottom:20px;
+}
+
+.product-payment{
+    margin-bottom:20px;
+}
+
+.payment-pictures{
+    width:40px;
+}
+
+.product-infos-container{
+    margin: 0 auto;
+}
+
+.production-description-container{
+    white-space: nowrap;
+}
+
+.product-description{
+    list-style: none;
+    display:flex;
+}
+
+.product-container{
+    font-size:16px;
+}
+
+.product-description-title{
+    font-weight: bold;
+}
+
+
+
+/* RESPONSIVE */
+
+@media (min-width:768px){
+    .product-container{
+        flex-direction: row;
+    }
+
+    .product-big-picture{
+        order:2;
+        width:300px;
+        margin:0;
+    }
+
+    .product-more-container{
+        order:1;
+        flex-direction: column;
+        display:flex;
+        margin:0;
+    }
+
+    .product-infos-container{
+        order:3;
+        margin:0;
+    }
+
+    .product-more-picture{
+        margin-bottom:20px;
+    }
+}
+
