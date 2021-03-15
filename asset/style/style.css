@@ -340,11 +340,16 @@ h2
     background-color:blue;
 }
 
+.shop-block h2{
+    color: black;
+}
+
 .products-wrapper
 {
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-bottom: 100px;
 }
 
 .product-boxes
@@ -356,7 +361,7 @@ h2
     height: 380px;
     background-color: grey;
     border-radius: 45px;
-    margin-bottom: 50px;
+    margin-top: 50px;
 }
 
 .products-info
@@ -378,6 +383,34 @@ h2
     color: black;
     margin: 10px 0px 10px 10px;
 }
+
+/* ------------------------------------------- LOGIN_USER ------------------------------------------------------*/
+
+.form-wrapper
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.form-wrapper h2
+{
+    color: black;
+}
+
+
+
+
+
+.form-control
+{
+    display: inline-block;
+}
+
+
+
+
+
 
 /* ------------------------------------------- FOOTER ------------------------------------------------------*/
 
@@ -546,6 +579,29 @@ footer h2
         margin-bottom: 0px;
     }
 
+    /* Footer */
+
+    footer
+    {
+        display: grid;
+        grid-template-areas: 
+        "footer-logo title-social"
+        "footer-nav footer-social-icon"
+        "footer-payment-icon footer-payment-icon";
+        justify-items: center;
+        align-content: center;
+    }
+
+    .footer-nav
+    {
+        grid-area: footer-nav;
+    }
+
+    .footer-payment-icon
+    {
+        grid-area: footer-payment-icon;
+    }
+
     
 }
 
@@ -613,6 +669,12 @@ footer h2
     .products-wrapper
     {
         grid-template-columns: repeat(3, 262px);
+    }
+
+    footer
+    {
+        grid-template-columns: repeat(2, 900px);
+        justify-content: center;
     }
 }
 
