@@ -22,27 +22,6 @@ h1, h2, h3, h4, p, ul
     padding: 0;
 }
 
-/* --------------------------------- STYLE TEXTE --------------------------------------------------------------- */
-
-h1
-{
-    color: white;
-    text-transform: uppercase;
-    font-family: 'Aldrich', sans-serif;
-}
-
-h2
-{
-    color: white;
-    text-transform: uppercase;
-    font-family: 'Aldrich', sans-serif;
-}
-
-.nav-link
-{
-    font-family: 'Aldrich', sans-serif;
-}
-
 /* --------------------------------- NAVIGATION --------------------------------------------------------------- */
 
 
@@ -649,6 +628,7 @@ footer h2
     {
         margin-right: calc(50% - 600px);
     }
+}
 
 
 @media (min-width:1800px){
@@ -699,10 +679,11 @@ footer h2
 
 .product-more-container{
     margin:0 auto 30px auto;
+    width:70px;
 }
 
 .product-more-picture{
-    width:70px;
+    width:100%;
 }
 
 .product-size{
@@ -762,7 +743,7 @@ footer h2
     .product-big-picture{
         order:2;
         width:300px;
-        margin:0;
+        margin:0 70px 0 70px;
     }
 
     .product-more-container{
@@ -781,4 +762,3 @@ footer h2
         margin-bottom:20px;
     }
 }
-
