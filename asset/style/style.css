@@ -16,7 +16,7 @@ body
     margin: 0;
 }
 
-h1, h2, p, ul
+h1, h2, h3, h4, p, ul
 {
     margin: 0;
     padding: 0;
@@ -51,10 +51,11 @@ h2
 {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    background-color: black;
+    background-color: #235d37;
     justify-items: center;
     align-items: center;
     grid-gap: 15px;
+    margin-bottom: 80px;
 }
 
 /*----------------- Menu Burger------------------ */
@@ -418,7 +419,7 @@ footer
 {
     display: flex;
     flex-direction: column;
-    background-color: black;
+    background-color:#235d37;
 }
 
 .footer-logo
@@ -535,6 +536,7 @@ footer h2
     {
         display: flex;
         justify-content: space-between;
+        margin-bottom: 0px;
     }
 
     .header-logo
@@ -601,8 +603,6 @@ footer h2
     {
         grid-area: footer-payment-icon;
     }
-
-    
 }
 
 @media (min-width:1024px){
@@ -649,7 +649,7 @@ footer h2
     {
         margin-right: calc(50% - 600px);
     }
-
+}
 
 @media (min-width:1800px){
     .main-wrapper, .nav-desktop{
@@ -677,3 +677,108 @@ footer h2
         justify-content: center;
     }
 }
+
+/* ---------------------------------------------------- FICHE PRODUIT -------------------------------------------------------*/
+
+.product-container{
+    margin-top:60px;
+    display:flex;
+    flex-direction: column;
+    /* flex-wrap: wrap;
+    justify-content: space-evenly; responsive */
+}
+
+.product-big-picture{
+    width:250px;
+    margin: 0 auto 30px auto;
+}
+
+.product-big-picture img{
+    width:100%;
+}
+
+.product-more-container{
+    margin:0 auto 30px auto;
+}
+
+.product-more-picture{
+    width:70px;
+}
+
+.product-size{
+    margin-bottom:20px;
+    background-color:white;
+    border: 1px solid black;
+}
+
+.product-price{
+    margin-bottom:20px;
+}
+
+.add-to-cart{
+    background-color:white;
+    border: 2px solid black;
+    margin-bottom:20px;
+}
+
+.product-payment{
+    margin-bottom:20px;
+}
+
+.payment-pictures{
+    width:40px;
+}
+
+.product-infos-container{
+    margin: 0 auto;
+}
+
+.production-description-container{
+    white-space: nowrap;
+}
+
+.product-description{
+    list-style: none;
+    display:flex;
+}
+
+.product-container{
+    font-size:16px;
+}
+
+.product-description-title{
+    font-weight: bold;
+}
+
+
+
+/* RESPONSIVE */
+
+@media (min-width:768px){
+    .product-container{
+        flex-direction: row;
+    }
+
+    .product-big-picture{
+        order:2;
+        width:300px;
+        margin:0;
+    }
+
+    .product-more-container{
+        order:1;
+        flex-direction: column;
+        display:flex;
+        margin:0;
+    }
+
+    .product-infos-container{
+        order:3;
+        margin:0;
+    }
+
+    .product-more-picture{
+        margin-bottom:20px;
+    }
+}
+
