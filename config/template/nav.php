@@ -101,7 +101,7 @@
                 </a>
             </div>
 
-            <a class="nav-link" href="#">Nouveautés</a>
+            <a class="nav-link" href="#">Home</a>
             <a class="nav-link" href="#">Selections</a>
             <a class="nav-link" href="#">Clubs</a>
             <a class="nav-link" href="#">Joueurs</a>
@@ -133,7 +133,7 @@
 </div>
 
 <nav class="nav-desktop">
-    <a class="nav-link" href="#">Nouveautés</a>
+    <a class="nav-link" href="#">Home</a>
     <a class="nav-link" href="#">Selections</a>
     <a class="nav-link" href="#">Clubs</a>
     <a class="nav-link" href="#">Joueurs</a>
