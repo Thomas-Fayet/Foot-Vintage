@@ -880,3 +880,42 @@ footer h2
         margin:0 70px 0 70px;
     }
 }
+
+/* ---------------------------------------------------- INSCRIPTION -------------------------------------------------------*/
+
+.form-title{
+    text-align: center;
+}
+
+form{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    width:250px;
+    margin: 20px auto 100px auto;
+    border-top: 1px solid black;
+    padding-top: 30px;
+}
+
+input, select {
+    height:30px;
+    margin:15px 0 20px 0;
+    border:1px solid black;
+    outline:none;
+}
+
+
+.form-submit-button{
+    cursor:pointer;
+    height:60px;
+    width:180px;
+    margin: 10px auto 0 auto;
+    font-size: 16px;
+    background-color: white;
+    text-transform: uppercase;
+}
+
+.form-submit-button:hover{
+    background-color:black;
+    color:white;
+}

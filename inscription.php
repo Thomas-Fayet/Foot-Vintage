@@ -36,29 +36,44 @@ if (isset($_POST['envoyer']))
 
 
 
+<?php include 'config/template/head.php'; ?>
 
-
-
-
-<form action="" method="post">
-    
-    <label for="pseudo">Pseudo</label>
-    <input type="text" name="pseudo" id="pseudo"><br>
-    <label for="civilite">Civilité</label>
-    <select name="civilite" id="civilite">
-        <option value="monsieur">Monsieur</option>
-        <option value="madame">Madame</option>
-        <option value="autre">Autre</option>
-    </select>
-    <label for="adresse">Adresse</label><br>
-    <input type="text" name="adresse" id="adresse"><br>
-    <label for="tel">Numéro de téléphone</label><br>
-    <input type="tel" name="tel" id="tel"><br>
-    <label for="email">E-mail</label><br>
-    <input type="email" name="email" id="email"><br>
-    <label for="password">Mot de passe</label><br>
-    <input type="password" name="password" id="password"><br>
-    <label for="confirmPassword">Confirmation de mot de passe</label><br>
-    <input type="password" name="confirmPassword" id="confirmPassword"><br>
-    <input type="submit" value="Envoyer" name="envoyer">
-</form>
+<body>
+    <header>
+        <?php include 'config/template/nav.php'; ?>
+    </header>
+    <main>
+        <section class="main-wrapper">
+            <h2 class="form-title">INSCRIPTION</h2>
+            <form action="" method="post">   
+                <label for="pseudo">Pseudo</label>
+                <input type="text" name="pseudo" id="pseudo">
+                <label for="civilite">Civilité</label>
+                <select name="civilite" id="civilite">
+                    <option value="monsieur">Monsieur</option>
+                    <option value="madame">Madame</option>
+                    <option value="autre">Autre</option>
+                </select>
+                <label for="adresse">Adresse</label>
+                <input type="text" name="adresse" id="adresse">
+                <label for="code_postal">Code postal</label>
+                <input type="number" name="code_postal" id="code_postal">
+                <label for="ville">Ville</label>
+                <input type="text" name="ville" id="ville">
+                <label for="tel">Numéro de téléphone</label>
+                <input type="tel" name="tel" id="tel">
+                <label for="email">E-mail</label>
+                <input type="email" name="email" id="email">
+                <label for="password">Mot de passe</label>
+                <input type="password" name="password" id="password">
+                <label for="confirmPassword">Confirmation de mot de passe</label>
+                <input type="password" name="confirmPassword" id="confirmPassword">
+                <input class="form-submit-button" type="submit" value="Envoyer" name="envoyer">
+            </form>
+        </section>
+    </main>
+    <footer>
+        <?php include 'config/template/footer.php'; ?>
+    </footer> 
+</body>
+</html>
