@@ -45,8 +45,7 @@
                     <div class="separator-info"> </div> 
                     <p class="products-price products-info"> 75 €</p> 
                 </div>
-            </section>
-            
+            </section> 
         </section>
     </main>
     <footer>
