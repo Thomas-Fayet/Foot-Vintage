@@ -364,28 +364,117 @@ h1, h2, h3, h4, p, ul
     margin: 10px 0px 10px 10px;
 }
 
-/* ------------------------------------------- LOGIN_USER ------------------------------------------------------*/
 
-.form-wrapper
-{
+/* ------------------------------------------- PRODIL_USER ------------------------------------------------------*/
+
+.profil-wrapper{
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-.form-wrapper h2
-{
+.profil-wrapper li{
+    list-style: none;
+}
+
+.separator-profil-menu{
+    background-color: black;
+    height: 1px;
+    margin: 30px 0px;
+}
+
+.profil-menu{
+    display: flex;
+}
+
+.button-profil-menu, .button-profil-info{
+    border: none;
+    background-color: transparent;
+    transition: 0.8s;
+}
+
+.button-profil-menu:hover, 
+.button-profil-info:hover{
+    cursor: pointer;
     color: black;
 }
 
-
-
-
-
-.form-control
-{
-    display: inline-block;
+.changePassword-button, 
+.button-profil-info{
+    color: grey;
 }
+
+.container-profil-info{
+    margin-top: 30px;
+    width: 100%;
+}
+
+.button-profil-info{
+    display: flex;
+    align-items: center;
+    position: relative;
+    left: calc(100% - 73px);
+    padding: 0px;
+    transition: 0.8s;
+}
+
+.icon-edit{
+    height: 1.3em;
+    fill: grey;
+}
+
+.button-profil-info:hover > .icon-edit{
+    fill: black;
+}
+
+.separator-profil-info{
+    background-color: black;
+    height: 1px;
+    margin:15px 0px 30px 0px;
+}
+
+
+.profil-info li{
+    margin-bottom: 10px;
+}
+
+
+/* --- RESPONSIVE --- */
+
+
+@media (min-width:768px){
+
+    .profil-wrapper{
+        display: grid;
+        grid-template-columns: 250px 1fr;
+        grid-template-areas: 
+        "profil-menu profil-info";
+        align-items: flex-start;
+    }
+
+    .container-profil-menu{
+        grid-area: profil-menu;
+    }
+
+    .separator-profil-menu{
+        width: 180px;
+    }
+
+    .profil-menu{
+        flex-direction: column;
+    }
+
+    .info-button{
+        margin-bottom: 15px;
+    }
+
+    .container-profil-info{
+        grid-area: profil-info;
+        margin-top: 26px;
+    }
+
+}
+
 
 
 
