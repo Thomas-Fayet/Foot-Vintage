@@ -15,8 +15,6 @@
 <h2>Rejoignez-nous !</h2>
 
 <div class="footer-social-icon">
-
-
     <a class="icon-link" href="#">
         <svg class="icon icon-footer icon-instagram">
             <use xlink:href="#icon-instagram"></use>

@@ -21,9 +21,6 @@
 
                     <button class="basket-button" type="submit" name="annuler">X</button>
                 </div>
-
-
-
             </section>
         </section>
     </main>

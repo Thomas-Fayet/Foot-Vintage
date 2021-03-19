@@ -92,7 +92,7 @@
         <input class="menu-btn" type="checkbox" id="menu-btn" />
         <label class="menu-icon" for="menu-btn"><span class="navicon"></span></label>
 
-        <nav class="nav-burger">
+        <nav class="nav-burger" role="navigation-mobil">
             <div class="nav-link-icon">
                 <a href="#">
                     <svg class="icon icon-burger icon-user">
@@ -137,7 +137,7 @@
     </div>
 </div>
 
-<nav class="nav-desktop">
+<nav class="nav-desktop" role="navigation-desktop">
     <a class="nav-link" href="#">Home</a>
     <a class="nav-link" href="#">Selections</a>
     <a class="nav-link" href="#">Clubs</a>
