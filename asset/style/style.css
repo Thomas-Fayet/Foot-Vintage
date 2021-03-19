@@ -751,8 +751,10 @@ footer h2
 
 .product-container{
     margin-top:60px;
+    margin-bottom:100px;
     display:flex;
     flex-direction: column;
+    font-size:16px;
     /* flex-wrap: wrap;
     justify-content: space-evenly; responsive */
 }
@@ -767,18 +769,27 @@ footer h2
 }
 
 .product-more-container{
-    margin:0 auto 30px auto;
-    width:70px;
+    margin-bottom:30px;
+    display:flex;
+    justify-content: center;
 }
 
 .product-more-picture{
-    width:100%;
+    width:70px;
+    margin-right:10px;
+}
+
+.product-more-picture:last-child{
+    margin:0;
 }
 
 .product-size{
-    margin-bottom:20px;
-    background-color:white;
-    border: 1px solid black;
+    margin:10px 0 20px 0;;
+    background-color:#C4C4C4;
+    border: none;
+    font-size:16px;
+    height:30px;
+    width:210px;
 }
 
 .product-price{
@@ -789,9 +800,21 @@ footer h2
     background-color:white;
     border: 2px solid black;
     margin-bottom:20px;
+    height:50px;
+    width:210px;
+    padding:0;
+    font-size:16px;
+    cursor:pointer;
+}
+
+.add-to-cart:hover{
+    background-color:black;
+    color:white;
 }
 
 .product-payment{
+    display: flex;
+    justify-content: space-between;
     margin-bottom:20px;
 }
 
@@ -810,17 +833,13 @@ footer h2
 .product-description{
     list-style: none;
     display:flex;
-}
-
-.product-container{
-    font-size:16px;
+    margin-bottom:20px;
 }
 
 .product-description-title{
     font-weight: bold;
+    margin-right:5px;
 }
-
-
 
 /* RESPONSIVE */
 
@@ -831,15 +850,20 @@ footer h2
 
     .product-big-picture{
         order:2;
-        width:300px;
-        margin:0 70px 0 70px;
+        width:400px;
+        margin:0 30px 0 30px;
     }
 
     .product-more-container{
         order:1;
         flex-direction: column;
-        display:flex;
+        justify-content: start;
         margin:0;
+    }
+
+    .product-more-picture{
+        margin-right:0;
+        width:100px;
     }
 
     .product-infos-container{
@@ -850,4 +874,49 @@ footer h2
     .product-more-picture{
         margin-bottom:20px;
     }
+}
+
+@media (min-width:1024px){
+    .product-big-picture{
+        margin:0 70px 0 70px;
+    }
+}
+
+/* ---------------------------------------------------- INSCRIPTION -------------------------------------------------------*/
+
+.form-title{
+    text-align: center;
+}
+
+form{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    width:250px;
+    margin: 20px auto 100px auto;
+    border-top: 1px solid black;
+    padding-top: 30px;
+}
+
+input, select {
+    height:30px;
+    margin:15px 0 20px 0;
+    border:1px solid black;
+    outline:none;
+}
+
+
+.form-submit-button{
+    cursor:pointer;
+    height:60px;
+    width:180px;
+    margin: 10px auto 0 auto;
+    font-size: 16px;
+    background-color: white;
+    text-transform: uppercase;
+}
+
+.form-submit-button:hover{
+    background-color:black;
+    color:white;
 }
