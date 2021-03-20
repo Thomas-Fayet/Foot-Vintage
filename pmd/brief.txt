@@ -92,3 +92,9 @@
                 - bonnes pratiques 
                 - contraintes 
                 - performances 
+
+
+
+
+
+base de données champs statut : 2 statuts un pour l'utilisateur et l'autre pour l'admin 
