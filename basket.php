@@ -6,6 +6,8 @@
     </header>
     <main>
         <section class="main-wrapper">
+            <h2>Votre Panier</h2>
+            
             <section class="basket-wrapper">
                 <div class="basket-container">
                     <img class="basket-picture" src="asset/img/ronaldinho.webp" alt="Image produit">

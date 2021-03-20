@@ -670,6 +670,10 @@ span {
 
 /* ------------------------------------------- BASKET ------------------------------------------------------*/
 
+.main-wrapper h2 {
+  margin-bottom: 30px;
+}
+
 .basket-wrapper {
   margin-bottom: 100px;
 }
