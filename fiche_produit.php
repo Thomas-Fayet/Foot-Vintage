@@ -24,7 +24,7 @@
                         <option value="2">Medium</option>
                         <option value="3">Large</option>
                     </select>
-                    <h3 class="product-price">90€</h3>
+                    <h3 class="product-price">90 €</h3>
                     <input class="add-to-cart" type="submit" value="Ajouter au panier">
                     <div class="product-payment">
                         <img class="payment-pictures" src="asset/img/paypal.svg" alt="Paiement paypal">
@@ -33,6 +33,9 @@
                         <img class="payment-pictures" src="asset/img/visa-logo.svg" alt="Paiement visa">
                     </div>
                     <ul class="production-description-container">
+                    <li class="product-description">
+                            <p class="product-stock">Il reste 14 produits en stock</p>
+                        </li>
                         <li class="product-description">
                             <p class="product-description-title">Équipe : </p>
                             <p>As Roma</p>

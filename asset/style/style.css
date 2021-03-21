@@ -835,6 +835,11 @@ footer h2
     margin-bottom:20px;
 }
 
+.product-stock{
+    font-weight:bold;
+    text-decoration: underline;
+}
+
 .product-description-title{
     font-weight: bold;
     margin-right:5px;
@@ -881,6 +886,16 @@ footer h2
     }
 }
 
+@media (min-width:1440px){
+    .product-big-picture{
+        width:500px;
+    }
+
+    .product-more-picture{
+        width:130px;
+    }
+}
+
 /* ---------------------------------------------------- INSCRIPTION -------------------------------------------------------*/
 
 .form-title{
@@ -918,4 +933,53 @@ input, select {
 .form-submit-button:hover{
     background-color:black;
     color:white;
+}
+
+/* ---------------------------------------------------- PAGE ADMIN -------------------------------------------------------*/
+
+.profil-container{
+    display:flex;
+    flex-direction: column;
+    margin: 20px 0 100px 0;
+    border-top: 1px solid black;
+    padding-top: 30px;
+}
+
+.admin-panel{
+    margin: 0 auto 20px auto;
+    flex-direction: column;
+    width:280px;
+}
+
+.admin-panel p {
+    text-align: center;
+}
+
+.quantity-price-container{
+    display:flex;
+    align-items:center;
+    justify-content: center;
+}
+
+.admin-input{
+    margin-left:10px;
+    margin-right:10px;
+    width:55px;
+}
+
+.admin-button{
+    height:15px;
+    width:10px;
+}
+
+@media (min-width:768px){
+    .admin-panel{
+        flex-direction: row;
+        align-items: center;
+        width:auto;
+    }
+
+    .admin-panel p {
+        margin-right:10px;
+    }
 }
