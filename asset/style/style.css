@@ -931,6 +931,8 @@ footer h2 {
 .product-description-title{
     font-weight: bold;
     margin-right:5px;
+}
+
 .product-description-title {
   font-weight: bold;
   margin-right: 5px;
@@ -1058,9 +1060,16 @@ select {
     width:55px;
 }
 
+.admin-product-list * {
+  background-color:black;
+  color:red;
+}
+
 .admin-button{
-    height:15px;
-    width:10px;
+    height:20px;
+    width:20px;
+    border:1px solid black;
+    cursor:pointer;
 }
 
 @media (min-width:768px){
@@ -1068,13 +1077,15 @@ select {
         flex-direction: row;
         align-items: center;
         width:auto;
+        margin: 0 0 20px 0;
     }
 
     .admin-panel p {
         margin-right:10px;
     }
+
+    .admin-submit{
+      margin: 10px 0 0 0;
+    }
 }
-.form-submit-button:hover {
-  background-color: black;
-  color: white;
-}
+

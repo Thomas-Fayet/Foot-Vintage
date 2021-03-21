@@ -32,7 +32,7 @@
                         <button class="admin-button">+</button>
                     </div>
                 </li>
-                <input class="form-submit-button" type="submit" value="Modifier" name="envoyer">
+                <input class="form-submit-button admin-submit" type="submit" value="Modifier" name="envoyer">
             </ul>
         </section>
     </main>
