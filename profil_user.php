@@ -45,5 +45,4 @@
         <?php include 'config/template/footer.php'; ?>
     </footer>
 </body>
-
 </html>
