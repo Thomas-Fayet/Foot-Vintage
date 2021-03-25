@@ -7,15 +7,15 @@
     <main>
         <section class="main-wrapper">
             <h2>AS ROMA 2012/2013 - DOMICILE</h2>
-            <section class="product-container">
+            <div class="product-container">
                 <div class="product-big-picture">
                     <img src="asset/img/ronaldinho.webp" alt="Image produit">
                 </div>
-                <section class="product-more-container">
+                <div class="product-more-container">
                     <img class="product-more-picture" src="asset/img/ronaldinho.webp" alt="Image produit">
                     <img class="product-more-picture" src="asset/img/ronaldinho.webp" alt="Image produit">
                     <img class="product-more-picture" src="asset/img/ronaldinho.webp" alt="Image produit">
-                </section>
+                </div>
                 <section class="product-infos-container">
                     <label for="product-size">Taille</label><br>
                     <select name="product-size" class="product-size" id="product-size">
@@ -33,7 +33,7 @@
                         <img class="payment-pictures" src="asset/img/visa-logo.svg" alt="Paiement visa">
                     </div>
                     <ul class="production-description-container">
-                    <li class="product-description">
+                        <li class="product-description">
                             <p class="product-stock">Il reste 14 produits en stock</p>
                         </li>
                         <li class="product-description">
@@ -54,7 +54,7 @@
                         </li>
                     </ul>
                 </section>
-            </section>
+            </div>
         </section>
     </main>
     <footer>
