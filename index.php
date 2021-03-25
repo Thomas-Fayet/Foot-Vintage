@@ -5,10 +5,7 @@
     </header>
     <main>
         <section class="main-wrapper">
-            <!--<div class="shop-block">
-                <h2 class="title-boxes news-title">LA BOUTIQUE</h2>
-            </div>-->
-
+            <h2 class="title-page">LA BOUTIQUE</h2>
             <div class="products-wrapper">
                 <article class="product-boxes product-one">
                     <img src="asset/img/psg-saison-1975/devant/psg-1975-devant-450x500.webp" alt="Maillot PSG extérieur 1975/76 devant">
