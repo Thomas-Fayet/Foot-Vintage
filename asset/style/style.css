@@ -106,19 +106,22 @@ span {
 }
 
 .nav-burger .icon-burger {
-  fill: white;
+  fill: black;
 }
 
 .nav-link-icon {
   margin-top: 40px;
-  width: 100%;
   display: flex;
-  justify-content: flex-end;
+  flex-direction: column;
+  text-align: center;
+  border-bottom:1px solid black;
 }
 
 .nav-link-icon a {
   text-decoration: none;
-  margin-right: 15px;
+  margin-bottom:30px;
+  font-size:24px;
+  color:black;
 }
 
 .navicon {
@@ -284,16 +287,6 @@ span {
 
 /* ------------------- RESPONSIVE ------------------- */
 
-@media (min-width: 480px) {
-  .nav-link-icon {
-    display: none;
-  }
-
-  .header-icon {
-    display: block;
-  }
-}
-
 @media (min-width: 768px) {
   .header-top {
     display: flex;
@@ -306,7 +299,20 @@ span {
   }
 
   .header-icon {
+    display:flex;
     margin-right: 5%;
+    align-items: center;
+  }
+
+  .header-icon a{
+    margin-right:20px;
+    text-decoration: none;
+    color:white;
+    font-size:20px;
+  }
+
+  .nav-link-icon {
+    display: none;
   }
 
   .burger-menu {
@@ -1077,6 +1083,7 @@ footer {
   justify-content: center;
   align-items: center;
   color: white;
+  margin-top: 30px;
 }
 
 .footer-logo h1 {
@@ -1154,6 +1161,10 @@ footer h2 {
 
   .footer-nav {
     grid-area: footer-nav;
+  }
+
+  .footer-logo {
+    margin-top:0px;
   }
 
   .footer-payment-icon {

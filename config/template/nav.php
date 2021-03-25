@@ -94,11 +94,8 @@
 
         <nav class="nav-burger">
             <div class="nav-link-icon">
-                <a href="#">
-                    <svg class="icon icon-burger icon-user">
-                        <use xlink:href="#icon-user"></use>
-                    </svg>
-                </a>
+                <a href="#">Se connecter</a>
+                <a href="#">S'inscrire</a>
                 <a href="#">
                     <svg class="icon icon-burger icon-bag">
                         <use xlink:href="#icon-bag"></use>
@@ -123,11 +120,8 @@
 
 
     <div class="header-icon">
-        <a class="icon-link" href="#">
-            <svg class="icon icon-nav icon-user">
-                <use xlink:href="#icon-user"></use>
-            </svg>
-        </a>
+        <a href="#">Se connecter</a>
+        <a href="#">S'inscrire</a>
 
         <a class="icon-link" href="#">
             <svg class="icon icon-nav icon-bag">

@@ -14,8 +14,6 @@
             </nav>
             <h2>Votre Panier</h2>
             <div class="basket-wrapper">
-                <div class="basket-info-container">
-                </div>
                 <div class="basket-container" id="basket-container-one">
                     <img class="basket-picture" src="asset/img/ronaldinho.webp" alt="Image produit">
                     <div class="basket-info-container">
