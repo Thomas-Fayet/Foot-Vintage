@@ -10,7 +10,7 @@
             </div>-->
 
             <div class="products-wrapper">
-                <article class="product-boxes product-one" aria-label="">
+                <article class="product-boxes product-one">
                     <p class="products-description products-info"> AS Roma 2012/13 - Domicile</p>  
                     <div class="separator-info"> </div> 
                     <p class="products-price products-info"> 90 €</p> 
