@@ -69,6 +69,7 @@ h1 {
 h2,
 p,
 a,
+ul,
 label,
 button,
 select,
@@ -636,7 +637,45 @@ span {
   margin-bottom: 10px;
 }
 
+.profil-update-info form {
+  display: grid;
+  grid-template-columns: auto auto;
+  column-gap: 10px;
+  row-gap: 10px;
+  align-items: center;
+  padding: 0px;
+  border: none;
+}
+
+.profil-update-info {
+  display: none;
+}
+
+.profil-update-info input, 
+.profil-update-info select {
+  margin: 0px;
+}
+
+.profil-update-info .button-update-info {
+  grid-column: span 2;
+  justify-self: center;
+  margin-top: 20px;
+}
+
+.container-password-forget {
+  display: none;
+}
+
+.container-password-forget h2 {
+  margin-top: 30px;
+}
+
 /* ------------------- RESPONSIVE ------------------- */
+@media (min-width: 337px) {
+  .info-button {
+    margin-right: 10px;
+  }
+}
 
 @media (min-width: 768px) {
   .profil-wrapper {
@@ -664,7 +703,11 @@ span {
 
   .container-profil-info {
     grid-area: profil-info;
-    margin-top: 26px;
+    margin-top: 22px;
+  }
+
+  .container-password-forget h2 {
+    margin-top: 0px;
   }
 }
 
@@ -758,7 +801,7 @@ footer {
 .nav-link-footer {
   margin-top: 20px;
   text-align: center;
-  text-transform: uppercase;
+  text-transform: none;
   color: white;
   font-size: 18px;
 }
@@ -770,6 +813,7 @@ footer {
 footer h2 {
   margin-top: 30px;
   margin-bottom: 20px;
+  text-transform: uppercase;
   text-align: center;
   color: white;
 }
@@ -1060,9 +1104,16 @@ select {
     width:55px;
 }
 
+.admin-product-list * {
+  background-color:black;
+  color:red;
+}
+
 .admin-button{
-    height:15px;
-    width:10px;
+    height:20px;
+    width:20px;
+    border:1px solid black;
+    cursor:pointer;
 }
 
 @media (min-width:768px){
@@ -1070,13 +1121,15 @@ select {
         flex-direction: row;
         align-items: center;
         width:auto;
+        margin: 0 0 20px 0;
     }
 
     .admin-panel p {
         margin-right:10px;
     }
+
+    .admin-submit{
+      margin: 10px 0 0 0;
+    }
 }
-.form-submit-button:hover {
-  background-color: black;
-  color: white;
-}
+
