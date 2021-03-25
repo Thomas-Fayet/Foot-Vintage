@@ -91,7 +91,7 @@
     <footer>
         <?php include 'config/template/footer.php'; ?>
     </footer>
-    <script src="asset/script/script.js"></script>
+    <script src="asset/script/script-pageUser.js"></script>
 </body>
 
 </html>

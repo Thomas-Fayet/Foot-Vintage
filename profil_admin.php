@@ -19,17 +19,17 @@
                 <li class="product-description admin-panel">
                     <p>Quantité :</p>
                     <div class="quantity-price-container">
-                        <button class="admin-button">-</button>
-                        <input class="admin-input" type="number" name="product-quantity" id="product-quantity">
-                        <button class="admin-button">+</button>
+                        <button class="admin-button" id="admin-button-quantity-minus">-</button>
+                        <input class="admin-input" value="14" type="number" name="product-quantity" id="product-quantity">
+                        <button class="admin-button" id="admin-button-quantity-plus">+</button>
                     </div>
                 </li>
                 <li class="product-description admin-panel">
                     <p>Prix (€) :</p>
                     <div class="quantity-price-container">
-                        <button class="admin-button">-</button>
-                        <input class="admin-input" type="number" name="product-price" id="product-price">
-                        <button class="admin-button">+</button>
+                        <button class="admin-button" id="admin-button-price-minus">-</button>
+                        <input class="admin-input" value="75" type="number" name="product-price" id="product-price">
+                        <button class="admin-button" id="admin-button-price-plus">+</button>
                     </div>
                 </li>
                 <input class="form-submit-button admin-submit" type="submit" value="Modifier" name="envoyer">
@@ -39,5 +39,6 @@
     <footer>
         <?php include 'config/template/footer.php'; ?>
     </footer>
+    <script src="asset/script/script-pageAdmin.js"></script>
 </body>
 </html>

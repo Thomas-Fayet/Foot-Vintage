@@ -10,7 +10,7 @@ let containerProfilInfo = document.getElementById("container-profil-info");
 let containerPasswordForget = document.getElementById("container-password-forget");
 
 
-/* ------------------- profil_user : modification informations utilisateurs ------------------- */
+// /* ------------------- profil_user : modification informations utilisateurs ------------------- */
 
 let btnUpdateInfo = document.getElementById("button-update-info");
 let profilInfo = document.getElementById("profil-info");
@@ -18,23 +18,23 @@ let profilUpdateInfo = document.getElementById("profil-update-info");
 
 
 
-/* --------------------------------------------------------------- GESTION DES EVENEMENTS --------------------------------------------------------------- */
+// /* --------------------------------------------------------------- GESTION DES EVENEMENTS --------------------------------------------------------------- */
 
-/* ------------------- profil_user : gestion affichage infos utilisateur et changement mdp ------------------- */
+// /* ------------------- profil_user : gestion affichage infos utilisateur et changement mdp ------------------- */
 
 btnInfo.addEventListener('click', () => displayInfo());
 btnPassword.addEventListener('click', () => displayPassword());
 
 
-/* ------------------- profil_user : modification informations utilisateurs ------------------- */
+// /* ------------------- profil_user : modification informations utilisateurs ------------------- */
 
 btnUpdateInfo.addEventListener('click', () => updateInfo());
 
 
 
-/* --------------------------------------------------------------- DECLARATION DES FONCTIONS --------------------------------------------------------------- */
+// /* --------------------------------------------------------------- DECLARATION DES FONCTIONS --------------------------------------------------------------- */
 
-/* ------------------- profil_user : gestion affichage infos utilisateur et changement mdp ------------------- */
+// /* ------------------- profil_user : gestion affichage infos utilisateur et changement mdp ------------------- */
 
 function displayInfo() {
     if (getComputedStyle(containerProfilInfo).display == "none") {
@@ -62,7 +62,7 @@ function displayPassword() {
 }
 
 
-/* ------------------- profil_user : modification informations utilisateurs ------------------- */
+// /* ------------------- profil_user : modification informations utilisateurs ------------------- */
 
 function updateInfo() {
     if (getComputedStyle(profilUpdateInfo).display == "none") {
@@ -72,3 +72,4 @@ function updateInfo() {
         profilUpdateInfo.style.display ="block";
     }
 }
+

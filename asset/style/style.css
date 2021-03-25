@@ -723,13 +723,13 @@ span {
 
 .basket-container {
   display: grid;
-  grid-template-columns: auto 1fr auto auto auto;
+  grid-template-columns: auto auto auto auto auto;
   align-items: center;
   background-color: #f2f2f2;
 }
 
 .basket-picture {
-  height: 75px;
+  height: auto;
   width: 100px;
   margin-right: 15px;
 }
@@ -750,6 +750,7 @@ span {
   border: black solid 1px;
   width: 25px;
   height: 25px;
+  margin:0;
 }
 
 .basket-button:hover {
@@ -761,7 +762,6 @@ span {
 
 @media (min-width: 768px) {
   .basket-picture {
-    height: 150px;
     width: 200px;
   }
 
@@ -773,110 +773,6 @@ span {
 }
 
 /* ------------------- RESPONSIVE ------------------- */
-
-/* ------------------------------------------- FOOTER ------------------------------------------------------*/
-
-footer {
-  display: flex;
-  flex-direction: column;
-  background-color: black;
-}
-
-.footer-logo {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: white;
-}
-
-.footer-logo h1 {
-  margin-right: 10px;
-}
-
-.footer-nav {
-  display: flex;
-  flex-direction: column;
-}
-
-.nav-link-footer {
-  margin-top: 20px;
-  text-align: center;
-  text-transform: none;
-  color: white;
-  font-size: 18px;
-}
-
-.nav-link-footer:hover {
-  color: red;
-}
-
-footer h2 {
-  margin-top: 30px;
-  margin-bottom: 20px;
-  text-transform: uppercase;
-  text-align: center;
-  color: white;
-}
-
-.footer-social-icon {
-  display: flex;
-  justify-content: center;
-}
-
-.footer-social-icon .icon-link {
-  margin: 0px 15px;
-  height: 48px;
-}
-
-.icon-footer {
-  height: 3em;
-  width: 3em;
-}
-
-.icon-footer:hover {
-  fill: red;
-}
-
-.footer-payment-icon {
-  margin-top: 30px;
-  display: flex;
-  justify-content: center;
-}
-
-.icon-payment {
-  margin: 0px 15px;
-  height: 2.5em;
-  width: 2.5em;
-}
-
-/* ------------------- RESPONSIVE ------------------- */
-
-@media (min-width: 768px) {
-  footer {
-    display: grid;
-    grid-template-areas:
-      "footer-logo title-social"
-      "footer-nav footer-social-icon"
-      "footer-payment-icon footer-payment-icon";
-    justify-items: center;
-    align-content: center;
-  }
-
-  .footer-nav {
-    grid-area: footer-nav;
-  }
-
-  .footer-payment-icon {
-    grid-area: footer-payment-icon;
-  }
-}
-
-@media (min-width: 1800px) {
-  footer {
-    grid-template-columns: repeat(2, 900px);
-    justify-content: center;
-  }
-}
 
 /* ---------------------------------------------------- FICHE PRODUIT -------------------------------------------------------*/
 
@@ -1102,6 +998,7 @@ select {
     margin-left:10px;
     margin-right:10px;
     width:55px;
+    text-align: center;
 }
 
 .admin-product-list * {
@@ -1131,5 +1028,109 @@ select {
     .admin-submit{
       margin: 10px 0 0 0;
     }
+}
+
+/* ------------------------------------------- FOOTER ------------------------------------------------------*/
+
+footer {
+  display: flex;
+  flex-direction: column;
+  background-color: black;
+}
+
+.footer-logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+
+.footer-logo h1 {
+  margin-right: 10px;
+}
+
+.footer-nav {
+  display: flex;
+  flex-direction: column;
+}
+
+.nav-link-footer {
+  margin-top: 20px;
+  text-align: center;
+  text-transform: none;
+  color: white;
+  font-size: 18px;
+}
+
+.nav-link-footer:hover {
+  color: red;
+}
+
+footer h2 {
+  margin-top: 30px;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  text-align: center;
+  color: white;
+}
+
+.footer-social-icon {
+  display: flex;
+  justify-content: center;
+}
+
+.footer-social-icon .icon-link {
+  margin: 0px 15px;
+  height: 48px;
+}
+
+.icon-footer {
+  height: 3em;
+  width: 3em;
+}
+
+.icon-footer:hover {
+  fill: red;
+}
+
+.footer-payment-icon {
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+}
+
+.icon-payment {
+  margin: 0px 15px;
+  height: 2.5em;
+  width: 2.5em;
+}
+
+/* ------------------- RESPONSIVE ------------------- */
+
+@media (min-width: 768px) {
+  footer {
+    display: grid;
+    grid-template-areas:
+      "footer-logo title-social"
+      "footer-nav footer-social-icon"
+      "footer-payment-icon footer-payment-icon";
+    justify-items: center;
+    align-content: center;
+  }
+
+  .footer-nav {
+    grid-area: footer-nav;
+  }
+
+  .footer-payment-icon {
+    grid-area: footer-payment-icon;
+  }
+}
+
+@media (min-width: 1800px) {
+  footer {
+    grid-template-columns: repeat(2, 900px);
+    justify-content: center;
+  }
 }
 
