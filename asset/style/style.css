@@ -518,29 +518,51 @@ span {
 .product-boxes {
   display: flex;
   flex-direction: column;
-  justify-content: flex-end;
-  width: 262px;
-  height: 380px;
-  background-color: grey;
-  border-radius: 45px;
+  justify-content: flex-start;
+  width: 275px;
+  height: auto;
+  border-radius: 60px 60px 12px 12px;
   margin-top: 50px;
 }
 
+.product-boxes:hover {
+  background-color: black;
+  color: white;
+  transition: 1s;
+  cursor: pointer;
+}
+
+.product-boxes:hover > .separator-info {
+  background-color: white;
+  transition: 0.8s;
+}
+
+.product-boxes img {
+  border-radius: 45px 45px 0px 0px;
+}
+
+.products-description {
+  margin-top: 10px;
+  text-transform: uppercase;
+  text-align: center;
+}
+
 .products-info {
-  margin-left: 10px;
   font-size: 16px;
+  font-weight: bold;
 }
 
 .products-price {
   margin-bottom: 18px;
+  text-align: center;
+  font-size: 20px;
 }
 
 .separator-info {
   background-color: black;
   height: 1px;
-  width: 240px;
-  color: black;
-  margin: 10px 0px 10px 10px;
+  width: 50%;
+  margin: 10px auto 10px auto;
 }
 
 /* ------------------- RESPONSIVE ------------------- */
@@ -723,7 +745,7 @@ span {
 
 .basket-container {
   display: grid;
-  grid-template-columns: auto auto auto auto auto;
+  grid-template-columns: auto 1fr auto auto auto;
   align-items: center;
   background-color: #f2f2f2;
 }
@@ -731,7 +753,6 @@ span {
 .basket-picture {
   height: auto;
   width: 100px;
-  margin-right: 15px;
 }
 
 .basket-info-container {

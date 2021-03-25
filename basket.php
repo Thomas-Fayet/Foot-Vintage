@@ -7,9 +7,6 @@
         <section class="main-wrapper">
             <h2>Votre Panier</h2>
             <div class="basket-wrapper">
-                <div class="basket-info-container">
-                    <p>
-                </div>
                 <div class="basket-container">
                     <img class="basket-picture" src="asset/img/ronaldinho.webp" alt="Image produit">
                     <div class="basket-info-container">
