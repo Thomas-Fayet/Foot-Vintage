@@ -5,10 +5,7 @@
     </header>
     <main>
         <section class="main-wrapper">
-            <!--<div class="shop-block">
-                <h2 class="title-boxes news-title">LA BOUTIQUE</h2>
-            </div>-->
-
+            <h2 class="title-page">LA BOUTIQUE</h2>
             <div class="products-wrapper">
                 <article class="product-boxes product-one">
                     <p class="products-description products-info"> AS Roma 2012/13 - Domicile</p>  
