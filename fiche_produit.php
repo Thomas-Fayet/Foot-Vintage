@@ -16,13 +16,30 @@
             <h2>AS ROMA 2012/2013 - DOMICILE</h2>
             <div class="product-container">
                 <div class="product-big-picture">
-                    <img src="asset/img/ronaldinho.webp" alt="Image produit">
+                    <img srcset="asset/img/psg-saison-1975/devant/psg-1975-devant-100x120.webp 100w,
+                                asset/img/psg-saison-1975/devant/psg-1975-devant-250x300.webp 250w,
+                                asset/img/psg-saison-1975/devant/psg-1975-devant-450x500.webp 450w" sizes="(max-width: 767px) 100px,
+                            (max-width: 1439px) 250px,
+                            800px" src="asset/img/psg-saison-1975/devant/psg-1975-devant-450x500.webp" alt="Maillot PSG extérieur 1975/76 devant">
                 </div>
+
                 <div class="product-more-container">
-                    <img class="product-more-picture" src="asset/img/ronaldinho.webp" alt="Image produit">
-                    <img class="product-more-picture" src="asset/img/ronaldinho.webp" alt="Image produit">
-                    <img class="product-more-picture" src="asset/img/ronaldinho.webp" alt="Image produit">
+                    <img class="product-more-picture" srcset="asset/img/psg-saison-1975/devant/psg-1975-devant-100x120.webp 100w,
+                                asset/img/psg-saison-1975/devant/psg-1975-devant-250x300.webp 250w" 
+                        sizes="(max-width: 767px) 100px, 250px" 
+                        src="asset/img/psg-saison-1975/devant/psg-1975-devant-250x300.webp" alt="Maillot PSG extérieur 1975/76 devant">
+
+                    <img class="product-more-picture" srcset="asset/img/psg-saison-1975/cote/psg-1975-cote-100x120.webp 100w,
+                            asset/img/psg-saison-1975/cote/psg-1975-cote-250x300.webp 250w" 
+                        sizes="(max-width: 767px) 100px, 250px" 
+                        src="asset/img/psg-saison-1975/cote/psg-1975-cote-250x300.webp" alt="Maillot PSG extérieur 1975/76 cote">
+
+                    <img class="product-more-picture" srcset="asset/img/psg-saison-1975/dos/psg-1975-dos-100x120.webp 100w,
+                            asset/img/psg-saison-1975/dos/psg-1975-dos-250x300.webp 250w" 
+                        sizes="(max-width: 767px) 100px, 250px" 
+                        src="asset/img/psg-saison-1975/dos/psg-1975-dos-250x300.webp" alt="Maillot PSG extérieur 1975/76 dos">
                 </div>
+
                 <section class="product-infos-container">
                     <label for="product-size">Taille</label><br>
                     <select name="product-size" class="product-size" id="product-size">
@@ -66,6 +83,7 @@
     </main>
     <footer>
         <?php include 'config/template/footer.php'; ?>
-    </footer> 
+    </footer>
 </body>
+
 </html>
