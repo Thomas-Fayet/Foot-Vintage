@@ -192,25 +192,20 @@ span {
 
 /*----------------- Fin Menu Burger ------------------ */
 
-.header-logo {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  color: white;
-}
-
-.header-logo h1 {
-  text-align: center;
-  font-size: 36px;
-}
-
-.header-logo .icon-soccer-ball {
-  width: 3.5em;
-  height: 3.5em;
+.header-logo-desktop{
+  display:none;
 }
 
 .header-icon {
   display: none;
+}
+
+.header-icon a{
+  transition:0.8s;
+}
+
+.header-icon a:hover{
+  color:#01D758;
 }
 
 .icon-nav {
@@ -254,7 +249,7 @@ span {
 }
 
 .icon-nav:hover {
-  fill: red;
+  fill: #01D758;
 }
 
 .breadcrumb ul {
@@ -292,10 +287,16 @@ span {
     display: flex;
     justify-content: space-between;
     margin-bottom: 0px;
+    height: 70px;
   }
 
-  .header-logo {
-    margin-left: 5%;
+  .header-logo-desktop{
+    display:block;
+    margin-left:5%;
+  }
+
+  .header-logo-mobile{
+    display:none;
   }
 
   .header-icon {
@@ -334,12 +335,12 @@ span {
     width: 85%;
   }
 
-  .header-logo {
-    margin-left: calc(7.5%);
+  .header-logo-desktop {
+    margin-left: 7.5%;
   }
 
   .header-icon {
-    margin-right: calc(7.5%);
+    margin-right: 7.5%;
   }
 }
 
@@ -348,7 +349,7 @@ span {
     width: 1200px;
   }
 
-  .header-logo {
+  .header-logo-desktop {
     margin-left: calc(50% - 600px);
   }
 
@@ -362,12 +363,12 @@ span {
     width: 70%;
   }
 
-  .header-logo {
-    margin-left: calc(15%);
+  .header-logo-desktop {
+    margin-left: 15%;
   }
 
   .header-icon {
-    margin-right: calc(15%);
+    margin-right: 15%;
   }
 }
 
@@ -378,172 +379,11 @@ span {
   margin: 0 auto;
 }
 
-.title-boxes {
-  text-align: center;
-  background-color: white;
-  width: 150px;
-  padding: 4px 0;
-  margin: 30px auto 0 auto;
-}
-
-.news-title {
-  width: 200px;
-}
-
-.news-block {
-  margin-bottom: 30px;
-  height: 400px;
-  display: flex;
-  flex-direction: column;
-  background-color: blue;
-}
-
-.championship-boxes {
-  background-color: blue;
-  border-radius: 12px;
-  height: 300px;
-  margin-bottom: 30px;
-}
-
-.championship-one {
-  background-image: linear-gradient(
-      to bottom,
-      rgba(0, 0, 0, 0.1),
-      rgba(0, 0, 0, 0.1)
-    ),
-    url("../img/ligue1-logo.webp");
-  background-size: cover;
-}
-
-.championship-two {
-  background-image: linear-gradient(
-      to bottom,
-      rgba(0, 0, 0, 0.1),
-      rgba(0, 0, 0, 0.1)
-    ),
-    url("../img/seriea.webp");
-  background-size: cover;
-}
-
-.championship-three {
-  background-image: linear-gradient(
-      to bottom,
-      rgba(0, 0, 0, 0.1),
-      rgba(0, 0, 0, 0.1)
-    ),
-    url("../img/bpl.webp");
-  background-size: cover;
-}
-
-.championship-four {
-  background-image: linear-gradient(
-      to bottom,
-      rgba(0, 0, 0, 0.1),
-      rgba(0, 0, 0, 0.1)
-    ),
-    url("../img/liga.webp");
-  background-size: cover;
-}
-
-.country-player-wrapper {
-  display: flex;
-  flex-direction: column;
-}
-
-.country-player-block {
-  height: 300px;
-  margin-bottom: 30px;
-  border-radius: 12px;
-}
-
-.country-block {
-  background-image: linear-gradient(
-      to bottom,
-      rgba(0, 0, 0, 0.1),
-      rgba(0, 0, 0, 0.1)
-    ),
-    url("../img/france.webp");
-  background-size: cover;
-}
-
-.player-block {
-  background-image: linear-gradient(
-      to bottom,
-      rgba(0, 0, 0, 0.1),
-      rgba(0, 0, 0, 0.1)
-    ),
-    url("../img/ronaldinho.webp");
-  background-size: cover;
-}
-
-/* ------------------- RESPONSIVE ------------------- */
-
-@media (min-width: 425px) {
-  .championship-wrapper {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-  }
-
-  .championship-boxes {
-    width: 48%;
-  }
-}
-
-@media (min-width: 768px) {
-  .news-title {
-    width: 300px;
-  }
-}
-
-@media (min-width: 1024px) {
-  .main-wrapper {
-    width: 85%;
-  }
-}
-
-@media (min-width: 1440px) {
-  .main-wrapper {
-    width: 1200px;
-  }
-
-  .championship-boxes {
-    width: 22%;
-  }
-
-  .country-player-wrapper {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-  }
-
-  .country-player-block {
-    width: 48%;
-  }
-}
-
-@media (min-width: 1800px) {
-  .main-wrapper {
-    width: 70%;
-  }
-}
-/* ------------------------------------------- PRODUCTS LIST ------------------------------------------------------*/
-
-.shop-block {
-  margin-top: 80px;
-  margin-bottom: 30px;
-  height: 400px;
-  display: flex;
-  flex-direction: column;
-  background-color: blue;
-}
-
 .title-page {
   color: white;
   margin:0 auto;
   text-align: center;
   width:250px;
-  top:calc(100%);
   padding:20px;
   background-color:black;
 }
@@ -578,7 +418,7 @@ span {
 }
 
 .product-boxes img {
-  border-radius: 45px 45px 0px 0px;
+  border-radius: 12px 12px 0px 0px;
 }
 
 .products-description {
@@ -606,6 +446,7 @@ span {
 }
 
 /* ------------------- RESPONSIVE ------------------- */
+
 @media (min-width: 768px) {
   .products-wrapper {
     display: grid;
@@ -620,12 +461,259 @@ span {
   }
 }
 
+@media (min-width: 1024px) {
+  .main-wrapper {
+    width: 85%;
+  }
+}
+
+@media (min-width: 1440px) {
+  .main-wrapper {
+    width: 1200px;
+  }
+}
+
 @media (min-width: 1800px) {
+  .main-wrapper {
+    width: 70%;
+  }
+
   .products-wrapper {
     grid-template-columns: repeat(3, 262px);
   }
 }
-/* ------------------------------------------- PRODIL_USER ------------------------------------------------------*/
+
+/* ---------------------------------------------------- FICHE PRODUIT -------------------------------------------------------*/
+
+.product-container {
+  margin-top: 60px;
+  margin-bottom: 100px;
+  display: flex;
+  flex-direction: column;
+  font-size: 16px;
+  /* flex-wrap: wrap;
+    justify-content: space-evenly; responsive */
+}
+
+.product-big-picture {
+  width: 250px;
+  margin: 0 auto 30px auto;
+}
+
+.product-big-picture img {
+  width: 100%;
+  border-radius:12px;
+}
+
+.product-more-container {
+  margin-bottom: 30px;
+  display: flex;
+  justify-content: center;
+}
+
+.product-more-picture {
+  width: 70px;
+  margin-right: 10px;
+  border-radius:12px;
+}
+
+.product-more-picture:last-child {
+  margin: 0;
+}
+
+.product-size {
+  margin: 10px 0 20px 0;
+  background-color: #c4c4c4;
+  border: none;
+  font-size: 16px;
+  height: 30px;
+  width: 210px;
+}
+
+.product-price {
+  margin-bottom: 20px;
+  font-weight:bold;
+  font-size:20px;
+}
+
+.add-to-cart {
+  background-color: white;
+  border: 2px solid black;
+  margin-bottom: 20px;
+  height: 50px;
+  width: 210px;
+  padding: 0;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.add-to-cart:hover {
+  background-color: black;
+  color: white;
+}
+
+.product-payment {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.payment-pictures {
+  width: 40px;
+  height: 40px;
+  fill:black;
+}
+
+.product-infos-container {
+  margin: 0 auto;
+}
+
+.production-description-container {
+  white-space: nowrap;
+}
+
+.product-description {
+  list-style: none;
+  display: flex;
+  margin-bottom: 20px;
+}
+
+.product-stock{
+    font-weight:bold;
+    text-decoration: underline;
+}
+
+.product-description-title{
+    font-weight: bold;
+    margin-right:5px;
+}
+
+.product-description-title {
+  font-weight: bold;
+  margin-right: 5px;
+}
+
+/* ------------------- RESPONSIVE ------------------- */
+
+@media (min-width: 768px) {
+  .product-container {
+    flex-direction: row;
+  }
+
+  .product-big-picture {
+    order: 2;
+    width: 400px;
+    margin: 0 30px 0 30px;
+  }
+
+  .product-more-container {
+    order: 1;
+    flex-direction: column;
+    justify-content: start;
+    margin: 0;
+  }
+
+  .product-more-picture {
+    margin-right: 0;
+    width: 100px;
+  }
+
+  .product-infos-container {
+    order: 3;
+    margin: 0;
+  }
+
+  .product-more-picture {
+    margin-bottom: 20px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .product-big-picture {
+    margin: 0 70px 0 70px;
+  }
+}
+
+@media (min-width:1440px){
+    .product-big-picture{
+        width:500px;
+    }
+
+    .product-more-picture{
+        width:130px;
+    }
+}
+
+/* ------------------------------------------- BASKET ------------------------------------------------------*/
+
+.main-wrapper h2 {
+  margin-bottom: 30px;
+}
+
+.basket-wrapper {
+  margin-bottom: 50px;
+}
+
+.basket-container {
+  display: grid;
+  grid-template-columns: auto auto auto auto auto;
+  align-items: center;
+  background-color: #f2f2f2;
+  font-weight:bold;
+}
+
+.basket-picture {
+  height: auto;
+  width: 100px;
+}
+
+.basket-info-container {
+  display: flex;
+  flex-direction: column;
+  margin-left:15px;
+}
+
+.basket-product-quantity,
+.basket-product-price,
+.basket-button {
+  font-size: 18px;
+  margin: 0px 10px;
+}
+
+.basket-button {
+  border: black solid 1px;
+  width: 25px;
+  height: 25px;
+  margin:0;
+}
+
+.basket-button:hover {
+  color: white;
+  border-color: black;
+  background-color:black;
+}
+
+.basket-payment-button{
+  position:relative;
+  left:calc(100% - 210px);
+  margin-bottom:100px;
+}
+
+/* ------------------- RESPONSIVE ------------------- */
+
+@media (min-width: 768px) {
+  .basket-picture {
+    width: 200px;
+  }
+
+  .basket-product-quantity,
+  .basket-product-price,
+  .basket-button {
+    margin: 0px 30px;
+  }
+}
+
+/* ------------------------------------------- PROFIL_USER ------------------------------------------------------*/
 
 .profil-wrapper {
   display: flex;
@@ -768,227 +856,80 @@ span {
     margin-top: 22px;
   }
 
+  .profil-update-info form {
+    grid-template-columns: 100px auto;
+    margin:20px 0 100px 0;
+  }
+
   .container-password-forget h2 {
     margin-top: 0px;
   }
 }
 
-/* ------------------------------------------- BASKET ------------------------------------------------------*/
+/* ---------------------------------------------------- PAGE ADMIN -------------------------------------------------------*/
 
-.main-wrapper h2 {
-  margin-bottom: 30px;
-}
-
-.basket-wrapper {
-  margin-bottom: 100px;
-}
-
-.basket-container {
-  display: grid;
-  grid-template-columns: auto 1fr auto auto auto;
-  align-items: center;
-  background-color: #f2f2f2;
-}
-
-.basket-picture {
-  height: auto;
-  width: 100px;
-}
-
-.basket-info-container {
-  display: flex;
+.profil-container{
+  display:flex;
   flex-direction: column;
+  margin: 20px 0 100px 0;
+  border-top: 1px solid black;
+  padding-top: 30px;
 }
 
-.basket-product-quantity,
-.basket-product-price,
-.basket-button {
-  font-size: 18px;
-  margin: 0px 10px;
-}
-
-.basket-button {
-  border: black solid 1px;
-  width: 25px;
-  height: 25px;
-  margin:0;
-}
-
-.basket-button:hover {
-  color: green;
-  border-color: green;
-}
-
-/* --- RESPONSIVE --- */
-
-@media (min-width: 768px) {
-  .basket-picture {
-    width: 200px;
-  }
-
-  .basket-product-quantity,
-  .basket-product-price,
-  .basket-button {
-    margin: 0px 30px;
-  }
-}
-
-/* ------------------- RESPONSIVE ------------------- */
-
-/* ---------------------------------------------------- FICHE PRODUIT -------------------------------------------------------*/
-
-.product-container {
-  margin-top: 60px;
-  margin-bottom: 100px;
-  display: flex;
+.admin-panel{
+  margin: 0 auto 20px auto;
   flex-direction: column;
-  font-size: 16px;
-  /* flex-wrap: wrap;
-    justify-content: space-evenly; responsive */
+  width:280px;
 }
 
-.product-big-picture {
-  width: 250px;
-  margin: 0 auto 30px auto;
+.admin-panel p {
+  text-align: center;
 }
 
-.product-big-picture img {
-  width: 100%;
-}
-
-.product-more-container {
-  margin-bottom: 30px;
-  display: flex;
+.quantity-price-container{
+  display:flex;
+  align-items:center;
   justify-content: center;
 }
 
-.product-more-picture {
-  width: 70px;
-  margin-right: 10px;
+.admin-input{
+  margin-left:10px;
+  margin-right:10px;
+  width:55px;
+  text-align: center;
 }
 
-.product-more-picture:last-child {
-  margin: 0;
+.admin-product-list * {
+background-color:black;
+color:red;
 }
 
-.product-size {
-  margin: 10px 0 20px 0;
-  background-color: #c4c4c4;
-  border: none;
-  font-size: 16px;
-  height: 30px;
-  width: 210px;
-}
-
-.product-price {
-  margin-bottom: 20px;
-}
-
-.add-to-cart {
-  background-color: white;
-  border: 2px solid black;
-  margin-bottom: 20px;
-  height: 50px;
-  width: 210px;
-  padding: 0;
-  font-size: 16px;
-  cursor: pointer;
-}
-
-.add-to-cart:hover {
-  background-color: black;
-  color: white;
-}
-
-.product-payment {
-  display: flex;
-  justify-content: space-between;
-  margin-bottom: 20px;
-}
-
-.payment-pictures {
-  width: 40px;
-}
-
-.product-infos-container {
-  margin: 0 auto;
-}
-
-.production-description-container {
-  white-space: nowrap;
-}
-
-.product-description {
-  list-style: none;
-  display: flex;
-  margin-bottom: 20px;
-}
-
-.product-stock{
-    font-weight:bold;
-    text-decoration: underline;
-}
-
-.product-description-title{
-    font-weight: bold;
-    margin-right:5px;
-}
-
-.product-description-title {
-  font-weight: bold;
-  margin-right: 5px;
+.admin-button{
+  height:20px;
+  width:20px;
+  border:1px solid black;
+  cursor:pointer;
 }
 
 /* ------------------- RESPONSIVE ------------------- */
 
-@media (min-width: 768px) {
-  .product-container {
-    flex-direction: row;
+@media (min-width:768px){
+  .admin-panel{
+      flex-direction: row;
+      align-items: center;
+      width:auto;
+      margin: 0 0 20px 0;
   }
 
-  .product-big-picture {
-    order: 2;
-    width: 400px;
-    margin: 0 30px 0 30px;
+  .admin-panel p {
+      margin-right:10px;
   }
 
-  .product-more-container {
-    order: 1;
-    flex-direction: column;
-    justify-content: start;
-    margin: 0;
-  }
-
-  .product-more-picture {
-    margin-right: 0;
-    width: 100px;
-  }
-
-  .product-infos-container {
-    order: 3;
-    margin: 0;
-  }
-
-  .product-more-picture {
-    margin-bottom: 20px;
+  .admin-submit{
+    margin: 10px 0 0 0;
   }
 }
 
-@media (min-width: 1024px) {
-  .product-big-picture {
-    margin: 0 70px 0 70px;
-  }
-}
-
-@media (min-width:1440px){
-    .product-big-picture{
-        width:500px;
-    }
-
-    .product-more-picture{
-        width:130px;
-    }
-}
 
 /* ---------------------------------------------------- INSCRIPTION -------------------------------------------------------*/
 
@@ -1029,67 +970,7 @@ select {
     color:white;
 }
 
-/* ---------------------------------------------------- PAGE ADMIN -------------------------------------------------------*/
 
-.profil-container{
-    display:flex;
-    flex-direction: column;
-    margin: 20px 0 100px 0;
-    border-top: 1px solid black;
-    padding-top: 30px;
-}
-
-.admin-panel{
-    margin: 0 auto 20px auto;
-    flex-direction: column;
-    width:280px;
-}
-
-.admin-panel p {
-    text-align: center;
-}
-
-.quantity-price-container{
-    display:flex;
-    align-items:center;
-    justify-content: center;
-}
-
-.admin-input{
-    margin-left:10px;
-    margin-right:10px;
-    width:55px;
-    text-align: center;
-}
-
-.admin-product-list * {
-  background-color:black;
-  color:red;
-}
-
-.admin-button{
-    height:20px;
-    width:20px;
-    border:1px solid black;
-    cursor:pointer;
-}
-
-@media (min-width:768px){
-    .admin-panel{
-        flex-direction: row;
-        align-items: center;
-        width:auto;
-        margin: 0 0 20px 0;
-    }
-
-    .admin-panel p {
-        margin-right:10px;
-    }
-
-    .admin-submit{
-      margin: 10px 0 0 0;
-    }
-}
 
 /* ------------------------------------------- FOOTER ------------------------------------------------------*/
 
@@ -1125,7 +1006,7 @@ footer {
 }
 
 .nav-link-footer:hover {
-  color: red;
+  color: #01D758;
 }
 
 footer h2 {
@@ -1152,13 +1033,14 @@ footer h2 {
 }
 
 .icon-footer:hover {
-  fill: red;
+  fill: #01D758;
 }
 
 .footer-payment-icon {
   margin-top: 30px;
   display: flex;
   justify-content: center;
+  margin-bottom: 30px;
 }
 
 .icon-payment {

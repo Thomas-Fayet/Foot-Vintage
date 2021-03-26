@@ -48,13 +48,24 @@
                         <option value="2">Medium</option>
                         <option value="3">Large</option>
                     </select>
-                    <h3 class="product-price">90 €</h3>
+                    <p class="product-price">90 €</p>
                     <input class="add-to-cart" type="submit" value="Ajouter au panier">
                     <div class="product-payment">
-                        <img class="payment-pictures" src="asset/img/paypal.svg" alt="Paiement paypal">
-                        <img class="payment-pictures" src="asset/img/mastercard.svg" alt="Paiement mastercard">
-                        <img class="payment-pictures" src="asset/img/americanexpress.svg" alt="Paiement american express">
-                        <img class="payment-pictures" src="asset/img/visa-logo.svg" alt="Paiement visa">
+                        <svg class="icon payment-pictures icon-paypal">
+                            <use xlink:href="#icon-paypal"></use>
+                        </svg>
+
+                        <svg class="icon payment-pictures icon-mastercard">
+                            <use xlink:href="#icon-mastercard"></use>
+                        </svg>
+
+                        <svg class="icon payment-pictures icon-americanexpress">
+                            <use xlink:href="#icon-americanexpress"></use>
+                        </svg>
+
+                        <svg class="icon payment-pictures icon-visa-logo">
+                            <use xlink:href="#icon-visa-logo"></use>
+                        </svg>
                     </div>
                     <ul class="production-description-container">
                         <li class="product-description">
