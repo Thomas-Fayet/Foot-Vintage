@@ -695,7 +695,7 @@ span {
 
 .profil-update-info form {
   display: grid;
-  grid-template-columns: auto auto;
+  grid-template-columns: 100px auto;
   column-gap: 10px;
   row-gap: 10px;
   align-items: center;
