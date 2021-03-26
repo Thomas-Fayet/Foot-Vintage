@@ -1,3 +1,6 @@
+"use strict";
+
+
 /* ------------------- profil_admin : minus/plus boutton ------------------- */
 
 

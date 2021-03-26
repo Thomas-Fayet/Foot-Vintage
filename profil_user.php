@@ -26,15 +26,15 @@
                     <div class="separator-profil-info"> </div>
 
                     <ul id="profil-info" class="profil-info">
-                        <li>Nom :</li>
-                        <li>Prénom :</li>
-                        <li>Pseudo :</li>
-                        <li>Civilité :</li>
-                        <li>E-mail :</li>
-                        <li>Adresse :</li>
-                        <li>Code postale:</li>
-                        <li>Ville :</li>
-                        <li>N° de téléphone:</li>
+                        <li>Nom : Dupont</li>
+                        <li>Prénom : Bobby</li>
+                        <li>Pseudo : BobbyLeFooteux</li>
+                        <li>Civilité : Monsieur</li>
+                        <li>E-mail : bobby@gmail.com</li>
+                        <li>Adresse : 1 avenue de Bobby</li>
+                        <li>Code postale: 77000</li>
+                        <li>Ville : Bobby City</li>
+                        <li>N° de téléphone: 06 06 06 06 06</li>
                     </ul>
 
                     <div id="profil-update-info" class="profil-update-info">
