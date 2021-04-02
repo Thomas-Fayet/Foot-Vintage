@@ -103,6 +103,7 @@ span {
   background-color: white;
   overflow: hidden;
   position: absolute;
+  z-index: 1;
 }
 
 .nav-burger .icon-burger {
@@ -966,6 +967,20 @@ select {
     color:white;
 }
 
+.form-inscription-message{
+  border-radius:12px;
+  padding: 0 5px;
+  line-height: 24px;
+  margin-bottom:20px;
+}
+
+.form-message-error{
+  background-color:#EF5350;
+}
+
+.form-message-valid{
+  background-color: #01d758;
+}
 
 
 /* ------------------------------------------- FOOTER ------------------------------------------------------*/
@@ -986,6 +1001,7 @@ footer {
 
 .footer-logo h1 {
   margin-right: 10px;
+  font-family:"Aldrich", sans-serif;
 }
 
 .footer-nav {

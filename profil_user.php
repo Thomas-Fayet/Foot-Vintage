@@ -71,7 +71,7 @@
                             <input type="tel" name="tel" id="tel">
 
 
-                            <input class="form-submit-button button-update-info" type="submit" value="Enregistrer" name="envoyer">
+                            <button class="form-submit-button button-update-info" type="submit" value="Enregistrer" name="envoyer"></button>
                         </form>
                     </div>
                 </div>

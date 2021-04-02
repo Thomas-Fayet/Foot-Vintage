@@ -49,7 +49,7 @@
                         <option value="3">Large</option>
                     </select>
                     <p class="product-price">90 €</p>
-                    <input class="add-to-cart" type="submit" value="Ajouter au panier">
+                    <button class="add-to-cart" type="submit" value="Ajouter au panier"></button>
                     <div class="product-payment">
                         <svg class="icon payment-pictures icon-paypal">
                             <use xlink:href="#icon-paypal"></use>
