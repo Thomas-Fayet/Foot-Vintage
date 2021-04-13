@@ -49,15 +49,13 @@ $products = $DB->query("SELECT * FROM product WHERE id_product = '$id_product' L
                 </div>
 
                 <section class="product-infos-container">
-                    <label for="product-size">Taille</label><br>
-                    <select name="product-size" class="product-size" id="product-size">
-                        <option value="">Choisir une taille</option>
-                        <option value="1">Small</option>
-                        <option value="2">Medium</option>
-                        <option value="3">Large</option>
-                    </select>
+                    <p class="product-price">Taille : <?php echo $product['size_product']; ?></p>
                     <p class="product-price"><?php echo $product['price_product']; ?> €</p>
-                    <a class="add-to-cart" id="add-basket" href="addbasket.php?id=<?= $product['id_product'] ?>">AJOUTER AU PANIER</a>
+                    <?php if ($product['stock_product'] >= 1){ ?>
+                        <a class="add-to-cart" id="add-basket" href="addbasket.php?id=<?php echo $product['id_product']; ?>">AJOUTER AU PANIER</a>
+                    <?php } else {
+                        echo "<p class='product-price'> Les stocks sont épuisés </p>";
+                    }?>
                     <div class="product-payment">
                         <svg class="icon payment-pictures icon-paypal">
                             <use xlink:href="#icon-paypal"></use>
