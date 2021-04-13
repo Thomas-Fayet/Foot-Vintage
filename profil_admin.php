@@ -1,10 +1,12 @@
 <?php include 'config/template/head.php';
 
+//On ne peut pas accéder à cette page si la session 'user' n'a pas été créée.
 if (!isset($_SESSION['user'])) {
     header('location:index.php?connect=forbidden');
     exit();
 }
 
+// Le membre ne peut pas accéder à la page admin alors il est redirigé vers sa page profil
 if ($_SESSION['user']['role'] == "membre") {
     header('location:profil_user.php?connect=forbidden');
     exit();

@@ -17,7 +17,6 @@ if (isset($_POST['envoyer']) && $_POST['envoyer'] == "Envoyer") {
         ]
     );
 
-    // $count = $userValide->rowCount();
     $rowUserValide = $userValide->fetch(PDO::FETCH_ASSOC);
 
 

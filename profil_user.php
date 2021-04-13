@@ -8,6 +8,7 @@ if (!isset($_SESSION['user'])) {
     exit();
 }
 
+// L'admin ne peut pas accéder à la page profil user alors il est redirigé vers sa page admin
 if ($_SESSION['user']['role'] == "admin"){
     header('location:profil_admin.php?connect=forbidden');
     exit();

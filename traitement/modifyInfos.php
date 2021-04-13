@@ -34,7 +34,7 @@ if (isset($_POST['modifier_les_informations']) && $_POST['modifier_les_informati
     }
 
     if (empty($content)) { // Si aucun champ d'alerte n'est affiché, alors toutes les informations sont valides, la modification de mot de passe a fonctionnée.
-        $contentUpdateValid .= "Votre mot de passe a été modifié ! <br>";
+        $contentUpdateValid .= "Vos informations ont été modifié ! <br>";
         
         $_SESSION['user']['pseudo'] = $pseudo;
         $_SESSION['user']['name'] = $name;

@@ -2,12 +2,13 @@
 
 include 'config/template/head.php';
 
-//On ne peut pas accéder à cette page si la session 'user' a été créée.
+//On ne peut pas accéder à cette page si le membre est déja connecté
 if (isset($_SESSION['user']) && $_SESSION['user']['role'] == "member") {
     header('location:profil_user.php?connect=forbidden');
     exit();
 }
 
+//On ne peut pas accéder à cette page si l'admin est déja connecté
 if (isset($_SESSION['user']) && $_SESSION['user']['role'] == "admin") {
     header('location:profil_admin.php?connect=forbidden');
     exit();
