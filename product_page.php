@@ -26,7 +26,7 @@ $products = $DB->query("SELECT * FROM product WHERE id_product = '$id_product' L
                                 asset/img/<?php echo $product['mainPicture_product']; ?>-250x300.webp 250w,
                                 asset/img/<?php echo $product['mainPicture_product']; ?>-450x500.webp 450w" sizes="(max-width: 767px) 100px,
                             (max-width: 1439px) 250px,
-                            800px" src="asset/img/<?php echo $product['mainPicture_product']; ?>-450x500.webp" alt="Maillot PSG extérieur 1975/76 devant">
+                            800px" src="asset/img/<?php echo $product['mainPicture_product']; ?>-450x500.webp" alt="<?php $product['altFrrontPicture_product'] ?>">
                 </div>
 
                 <div class="product-more-container">
@@ -49,7 +49,7 @@ $products = $DB->query("SELECT * FROM product WHERE id_product = '$id_product' L
                         <option value="3">Large</option>
                     </select>
                     <p class="product-price"><?php echo $product['price_product']; ?> €</p>
-                    <a class="add-to-cart" href="basket.php">AJOUTER AU PANIER</a>
+                    <a class="add-to-cart" id="add-basket" href="addbasket.php?id=<?= $product['id_product'] ?>">AJOUTER AU PANIER</a>
                     <div class="product-payment">
                         <svg class="icon payment-pictures icon-paypal">
                             <use xlink:href="#icon-paypal"></use>
@@ -96,6 +96,7 @@ $products = $DB->query("SELECT * FROM product WHERE id_product = '$id_product' L
 <footer>
     <?php include 'config/template/footer.php'; ?>
 </footer>
+<script src="asset/script/script-addBasket.js"></script>
 </body>
 
 </html>

@@ -1,6 +1,6 @@
 <header>
 
-    <?php session_start(); ?>
+
     <svg aria-hidden="true" style="position: absolute; width: 0; height: 0; overflow: hidden;" version="1.1" xmlns="http://www.w3.org/2000/svg">
         <defs>
             <symbol id="icon-logo-desktop" viewBox="0 0 197 32">
@@ -105,14 +105,18 @@
 
             <nav class="nav-burger">
                 <div class="nav-link-icon">
-                    <?php if(isset($_SESSION['user'])){ // Si une session existe, alors la navigation change pour afficher "Profil" et "Se déconnecter"
-                            echo "<a href='profil_user.php'>Profil</a>";
-                            echo "<a href='deconnexion.php'>Se déconnecter</a>";
+                    <?php if (isset($_SESSION['user'])) { // Si une session existe, alors la navigation change pour afficher "Profil" et "Se déconnecter"
+                        if ($_SESSION['user']['role'] == "admin") {
+                            echo "<a href='profil_admin.php'>Profil</a>";
                         } else {
-                            echo "<a href='login.php'>Se connecter</a>";
-                            echo "<a href='inscription.php'>S'inscrire</a>";
+                            echo "<a href='profil_user.php'>Profil</a>";
                         }
-                    
+                        echo "<a href='deconnexion.php'>Se déconnecter</a>";
+                    } else {
+                        echo "<a href='login.php'>Se connecter</a>";
+                        echo "<a href='inscription.php'>S'inscrire</a>";
+                    }
+
                     ?>
                     <a href="basket.php">
                         <svg class="icon icon-burger icon-bag">
@@ -131,21 +135,25 @@
         <a class="header-logo-desktop" href="index.php">
             <img src="asset/img/logo-desktop.png" href="index.php">
         </a>
-        
+
         <a class="header-logo-mobile" href="index.php">
             <img src="asset/img/logo-mobile.png" href="index.php">
         </a>
 
         <div class="header-icon">
-            <?php if(isset($_SESSION['user'])){ // Si une session existe, alors la navigation change pour afficher "Profil" et "Se déconnecter"
-                    // Condition if l'utilisateur est un admin, alors c'est profil_admin dans la nav 
-                    echo "<a href='profil_user.php'>Profil</a>";
-                    echo "<a href='deconnexion.php'>Se déconnecter</a>";
+            <?php if (isset($_SESSION['user'])) { // Si une session existe, alors la navigation change pour afficher "Profil" et "Se déconnecter"
+                // Condition if l'utilisateur est un admin, alors c'est profil_admin dans la nav 
+                if ($_SESSION['user']['role'] == "admin") {
+                    echo "<a href='profil_admin.php'>Profil</a>";
                 } else {
-                    echo "<a href='login.php'>Se connecter</a>";
-                    echo "<a href='inscription.php'>S'inscrire</a>";
+                    echo "<a href='profil_user.php'>Profil</a>";
                 }
-                    
+                echo "<a href='deconnexion.php'>Se déconnecter</a>";
+            } else {
+                echo "<a href='login.php'>Se connecter</a>";
+                echo "<a href='inscription.php'>S'inscrire</a>";
+            }
+
             ?>
             <a class="icon-link" href="basket.php">
                 <svg class="icon icon-nav icon-bag">

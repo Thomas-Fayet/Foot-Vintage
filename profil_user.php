@@ -1,7 +1,7 @@
 <?php
 
 include 'config/template/head.php';
-include 'config/template/nav.php';
+
 
 //On ne peut pas accéder à cette page si la session 'user' a été créée.
 // if (!isset($_SESSION['user']) || $_SESSION['user']['role'] == "admin") {
@@ -10,6 +10,7 @@ include 'config/template/nav.php';
 // }
 
 ?>
+<?php include 'config/template/nav.php'; ?>
 
 <main>
     <section class="main-wrapper">

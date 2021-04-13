@@ -115,14 +115,14 @@ span {
   display: flex;
   flex-direction: column;
   text-align: center;
-  border-bottom:1px solid black;
+  border-bottom: 1px solid black;
 }
 
 .nav-link-icon a {
   text-decoration: none;
-  margin-bottom:30px;
-  font-size:24px;
-  color:black;
+  margin-bottom: 30px;
+  font-size: 24px;
+  color: black;
 }
 
 .navicon {
@@ -193,20 +193,20 @@ span {
 
 /*----------------- Fin Menu Burger ------------------ */
 
-.header-logo-desktop{
-  display:none;
+.header-logo-desktop {
+  display: none;
 }
 
 .header-icon {
   display: none;
 }
 
-.header-icon a{
-  transition:0.8s;
+.header-icon a {
+  transition: 0.8s;
 }
 
-.header-icon a:hover{
-  color:#01D758;
+.header-icon a:hover {
+  color: #01d758;
 }
 
 .icon-nav {
@@ -250,33 +250,33 @@ span {
 }
 
 .icon-nav:hover {
-  fill: #01D758;
+  fill: #01d758;
 }
 
 .breadcrumb ul {
   display: flex;
-  list-style:none;
-  margin-bottom:30px;
+  list-style: none;
+  margin-bottom: 30px;
 }
 
 .breadcrumb a {
-  color:black;
-  cursor:pointer;
-  margin:0 7px;
+  color: black;
+  cursor: pointer;
+  margin: 0 7px;
 }
 
 .breadcrumb ul:first-child {
-  margin-left:0px;
+  margin-left: 0px;
 }
 
 .breadcrumb span {
-  margin-left:7px;
+  margin-left: 7px;
 }
-  
+
 .breadcrumb li::before {
   content: "/";
 }
-  
+
 .breadcrumb li:first-child::before {
   content: "";
 }
@@ -291,26 +291,26 @@ span {
     height: 70px;
   }
 
-  .header-logo-desktop{
-    display:block;
-    margin-left:5%;
+  .header-logo-desktop {
+    display: block;
+    margin-left: 5%;
   }
 
-  .header-logo-mobile{
-    display:none;
+  .header-logo-mobile {
+    display: none;
   }
 
   .header-icon {
-    display:flex;
+    display: flex;
     margin-right: 5%;
     align-items: center;
   }
 
-  .header-icon a{
-    margin-right:20px;
+  .header-icon a {
+    margin-right: 20px;
     text-decoration: none;
-    color:white;
-    font-size:20px;
+    color: white;
+    font-size: 20px;
   }
 
   .nav-link-icon {
@@ -382,11 +382,11 @@ span {
 
 .title-page {
   color: white;
-  margin:0 auto;
+  margin: 0 auto;
   text-align: center;
-  width:250px;
-  padding:20px;
-  background-color:black;
+  width: 250px;
+  padding: 20px;
+  background-color: black;
 }
 
 .products-wrapper {
@@ -396,9 +396,9 @@ span {
   margin-bottom: 100px;
 }
 
-.link-product{
+.link-product {
   text-decoration: none;
-  color:black;
+  color: black;
 }
 
 .product-boxes {
@@ -508,7 +508,7 @@ span {
 
 .product-big-picture img {
   width: 100%;
-  border-radius:12px;
+  border-radius: 12px;
 }
 
 .product-more-container {
@@ -520,7 +520,7 @@ span {
 .product-more-picture {
   width: 70px;
   margin-right: 10px;
-  border-radius:12px;
+  border-radius: 12px;
 }
 
 .product-more-picture:last-child {
@@ -538,8 +538,8 @@ span {
 
 .product-price {
   margin-bottom: 20px;
-  font-weight:bold;
-  font-size:20px;
+  font-weight: bold;
+  font-size: 20px;
 }
 
 .add-to-cart {
@@ -568,7 +568,7 @@ span {
 .payment-pictures {
   width: 40px;
   height: 40px;
-  fill:black;
+  fill: black;
 }
 
 .product-infos-container {
@@ -581,14 +581,14 @@ span {
   margin-bottom: 20px;
 }
 
-.product-stock{
-    font-weight:bold;
-    text-decoration: underline;
+.product-stock {
+  font-weight: bold;
+  text-decoration: underline;
 }
 
-.product-description-title{
-    font-weight: bold;
-    margin-right:5px;
+.product-description-title {
+  font-weight: bold;
+  margin-right: 5px;
 }
 
 .product-description-title {
@@ -637,14 +637,14 @@ span {
   }
 }
 
-@media (min-width:1440px){
-    .product-big-picture{
-        width:500px;
-    }
+@media (min-width: 1440px) {
+  .product-big-picture {
+    width: 500px;
+  }
 
-    .product-more-picture{
-        width:130px;
-    }
+  .product-more-picture {
+    width: 130px;
+  }
 }
 
 /* ------------------------------------------- BASKET ------------------------------------------------------*/
@@ -653,19 +653,37 @@ span {
   margin-bottom: 30px;
 }
 
+.basket-form {
+  display: flex;
+  position: relative;
+  width: auto;
+  border-top: 1px solid black;
+  padding-top: 30px;
+}
+
 .basket-wrapper {
   margin-bottom: 50px;
 }
 
+.basket-titles {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  justify-items: center;
+  font-weight: bold;
+  margin-bottom: 5%;
+}
+
 .basket-container {
   display: grid;
-  grid-template-columns: auto auto auto auto auto;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  justify-items: center;
   align-items: center;
   background-color: #f2f2f2;
-  font-weight:bold;
+  font-weight: bold;
 }
 
 .basket-picture {
+  display: none;
   height: auto;
   width: 100px;
 }
@@ -673,7 +691,7 @@ span {
 .basket-info-container {
   display: flex;
   flex-direction: column;
-  margin-left:15px;
+  margin-left: 15px;
 }
 
 .basket-product-quantity,
@@ -683,35 +701,86 @@ span {
   margin: 0px 10px;
 }
 
+.basket-product-quantity input {
+  width: 30px;
+}
+
 .basket-button {
   border: black solid 1px;
-  width: 25px;
-  height: 25px;
-  margin:0;
+  color: black;
+  padding: 5px 9.5px;
+  margin: 0;
+  text-decoration: none;
 }
 
 .basket-button:hover {
   color: white;
   border-color: black;
-  background-color:black;
+  background-color: black;
 }
 
-.basket-payment-button{
-  position:relative;
-  left:calc(100% - 210px);
-  margin-bottom:100px;
+.basket-total {
+  position: absolute;
+  margin-top: 15px;
+  right: 0;
+  top: 100%;
+  transform: translateX(-50%);
+}
+
+#actualise-basket {
+  visibility: hidden;
+  position: absolute;
+}
+
+.basket-payment-button {
+  position: relative;
+  left: calc(100% - 210px);
+  margin-bottom: 100px;
 }
 
 /* ------------------- RESPONSIVE ------------------- */
+
+@media (min-width: 510px) {
+  .basket-product-quantity input {
+    width: auto;
+  }
+
+  .basket-titles {
+    display: grid;
+    grid-template-columns: minmax(100px, 1fr) 1fr 1fr 1fr 1fr;
+    justify-items: center;
+    font-weight: bold;
+  }
+  
+  .basket-titles-info {
+    grid-column: 2 / 3;
+  }
+  
+  .basket-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    justify-items: center;
+    align-items: center;
+    background-color: #f2f2f2;
+    font-weight: bold;
+  }
+
+  .basket-picture {
+    display: block;
+  }
+}
 
 @media (min-width: 768px) {
   .basket-picture {
     width: 200px;
   }
 
+  .basket-titles {
+    grid-template-columns: minmax(200px, 1fr) 1fr 1fr 1fr 1fr;
+  }
+
   .basket-product-quantity,
-  .basket-product-price,
-  .basket-button {
+  .basket-product-price {
     margin: 0px 30px;
   }
 }
@@ -804,7 +873,7 @@ span {
   display: none;
 }
 
-.profil-update-info input, 
+.profil-update-info input,
 .profil-update-info select {
   margin: 0px;
 }
@@ -861,7 +930,7 @@ span {
 
   .profil-update-info form {
     grid-template-columns: 100px auto;
-    margin:20px 0 100px 0;
+    margin: 20px 0 100px 0;
   }
 
   .container-password-forget h2 {
@@ -871,68 +940,74 @@ span {
 
 /* ---------------------------------------------------- PAGE ADMIN -------------------------------------------------------*/
 
-.profil-container{
-  display:flex;
+.profil-container {
+  display: flex;
   flex-direction: column;
   margin: 20px 0 100px 0;
   border-top: 1px solid black;
   padding-top: 30px;
 }
 
-.admin-panel{
+.admin-panel {
   margin: 0 auto 20px auto;
   flex-direction: column;
-  width:280px;
+  width: 280px;
 }
 
 .admin-panel p {
   text-align: center;
 }
 
-.quantity-price-container{
-  display:flex;
-  align-items:center;
+.quantity-price-container {
+  display: flex;
+  align-items: center;
   justify-content: center;
 }
 
-.admin-input{
-  margin-left:10px;
-  margin-right:10px;
-  width:55px;
+.quantity-price-container span{
+  margin-right: 15px;
+}
+
+.admin-input {
+  margin-left: 10px;
+  margin-right: 10px;
+  width: 55px;
   text-align: center;
 }
 
 .admin-product-list * {
-background-color:black;
-color:red;
+  background-color: black;
+  color: red;
 }
 
-.admin-button{
-  height:20px;
-  width:20px;
-  border:1px solid black;
-  cursor:pointer;
+.admin-button {
+  display: flex;
+  justify-content: center;
+  user-select: none;
+  height: 20px;
+  width: 20px;
+  border: 1px solid black;
+  cursor: pointer;
 }
 
 /* ------------------- RESPONSIVE ------------------- */
 
-@media (min-width:768px){
-  .admin-panel{
-      flex-direction: row;
-      align-items: center;
-      width:auto;
-      margin: 0 0 20px 0;
+@media (min-width: 768px) {
+  .admin-panel {
+    flex-direction: row;
+    align-items: center;
+    width: auto;
+    margin: 0 0 20px 0;
   }
 
   .admin-panel p {
-      margin-right:10px;
+    margin-right: 10px;
   }
 
-  .admin-submit{
+  .admin-submit {
     margin: 10px 0 0 0;
   }
 }
-
 
 /* ---------------------------------------------------- INSCRIPTION -------------------------------------------------------*/
 
@@ -940,7 +1015,7 @@ color:red;
   text-align: center;
 }
 
-form {
+/* form {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -948,7 +1023,7 @@ form {
   margin: 20px auto 100px auto;
   border-top: 1px solid black;
   padding-top: 30px;
-}
+} */
 
 input,
 select {
@@ -968,26 +1043,25 @@ select {
   text-transform: uppercase;
 }
 
-.form-submit-button:hover{
-    background-color:black;
-    color:white;
+.form-submit-button:hover {
+  background-color: black;
+  color: white;
 }
 
-.form-inscription-message{
-  border-radius:12px;
+.form-inscription-message {
+  border-radius: 12px;
   padding: 0 5px;
   line-height: 24px;
-  margin-bottom:20px;
+  margin-bottom: 20px;
 }
 
-.form-message-error{
-  background-color:#EF5350;
+.form-message-error {
+  background-color: #ef5350;
 }
 
-.form-message-valid{
+.form-message-valid {
   background-color: #01d758;
 }
-
 
 /* ------------------------------------------- FOOTER ------------------------------------------------------*/
 
@@ -1007,7 +1081,7 @@ footer {
 
 .footer-logo h1 {
   margin-right: 10px;
-  font-family:"Aldrich", sans-serif;
+  font-family: "Aldrich", sans-serif;
 }
 
 .footer-nav {
@@ -1024,7 +1098,7 @@ footer {
 }
 
 .nav-link-footer:hover {
-  color: #01D758;
+  color: #01d758;
 }
 
 footer h2 {
@@ -1051,7 +1125,7 @@ footer h2 {
 }
 
 .icon-footer:hover {
-  fill: #01D758;
+  fill: #01d758;
 }
 
 .footer-payment-icon {
@@ -1085,7 +1159,7 @@ footer h2 {
   }
 
   .footer-logo {
-    margin-top:0px;
+    margin-top: 0px;
   }
 
   .footer-payment-icon {
@@ -1100,3 +1174,26 @@ footer h2 {
   }
 }
 
+
+/* ---------------------------------------------------- ADMIN_PODUCT -------------------------------------------------------*/
+@media (min-width: 768px) {
+  .admin-product-container {
+    display: grid;
+    grid-template-areas: 
+    "picture quantity"
+    "picture price";
+  }
+  
+  .admin-product-picture {
+    grid-area: picture ;
+  }
+  
+  .admin-product-quantity {
+    grid-area: quantity ;
+  }
+  
+  .admin-product-price {
+    grid-area: price ;
+  }
+
+}
