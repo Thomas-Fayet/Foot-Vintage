@@ -3,10 +3,25 @@
 include 'config/template/head.php';
 
 //On ne peut pas accéder à cette page si la session 'user' a été créée.
-if (isset($_SESSION['user'])) {
+if (isset($_SESSION['user']) && $_SESSION['user']['role'] == "member") {
     header('location:profil_user.php?connect=forbidden');
     exit();
 }
+
+if (isset($_SESSION['user']) && $_SESSION['user']['role'] == "admin") {
+    header('location:profil_admin.php?connect=forbidden');
+    exit();
+}
+
+// if ($_SESSION['user']['role'] == "member"){
+//     header('location:profil_user.php?connect=forbidden');
+//     exit();
+// }
+
+// if ($_SESSION['user']['role'] == "admin"){
+//     header('location:profil_admin.php?connect=forbidden');
+//     exit();
+// }
 
 $content = "";
 
@@ -62,7 +77,6 @@ if (isset($_POST['envoyer']) && $_POST['envoyer'] == "Envoyer") {
 
 <?php include 'config/template/nav.php'; ?>
 
-<?php include 'config/template/nav.php'; ?>
 <main>
     <section class="main-wrapper">
         <h2 class="form-title">CONNEXION</h2>

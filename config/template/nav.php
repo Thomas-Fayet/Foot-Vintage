@@ -111,13 +111,9 @@
                             }
                             echo "<a href='deconnexion.php'>Se déconnecter</a>";
                         } else {
-                            echo "<a href='profil_user.php'>Profil</a>";
+                            echo "<a href='login.php'>Se connecter</a>";
+                            echo "<a href='inscription.php'>S'inscrire</a>";
                         }
-                        echo "<a href='deconnexion.php'>Se déconnecter</a>";
-                    } else {
-                        echo "<a href='login.php'>Se connecter</a>";
-                        echo "<a href='inscription.php'>S'inscrire</a>";
-                    }
 
                     ?>
                     <a href="basket.php">
@@ -151,13 +147,9 @@
                     }
                     echo "<a href='deconnexion.php'>Se déconnecter</a>";
                 } else {
-                    echo "<a href='profil_user.php'>Profil</a>";
+                    echo "<a href='login.php'>Se connecter</a>";
+                    echo "<a href='inscription.php'>S'inscrire</a>";
                 }
-                echo "<a href='deconnexion.php'>Se déconnecter</a>";
-            } else {
-                echo "<a href='login.php'>Se connecter</a>";
-                echo "<a href='inscription.php'>S'inscrire</a>";
-            }
 
             ?>
             <a class="icon-link" href="basket.php">

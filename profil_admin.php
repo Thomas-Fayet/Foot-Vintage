@@ -6,7 +6,7 @@ if (!isset($_SESSION['user'])) {
 }
 
 if ($_SESSION['user']['role'] == "membre") {
-    header('location:profil_user.php');
+    header('location:profil_user.php?connect=forbidden');
     exit();
 }
 

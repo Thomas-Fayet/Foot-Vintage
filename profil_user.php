@@ -9,7 +9,7 @@ if (!isset($_SESSION['user'])) {
 }
 
 if ($_SESSION['user']['role'] == "admin"){
-    header('location:profil_admin.php');
+    header('location:profil_admin.php?connect=forbidden');
     exit();
 }
 
