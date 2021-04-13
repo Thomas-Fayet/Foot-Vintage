@@ -1,3 +1,5 @@
+<?php require "./config/init.php"; ?>
+
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -7,3 +9,4 @@
     <link href="asset/style/style.css" rel="stylesheet">
     <title>Foot Vintage</title>
 </head>
+<body>

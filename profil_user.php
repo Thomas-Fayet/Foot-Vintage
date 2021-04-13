@@ -1,97 +1,104 @@
-<?php include 'config/template/head.php'; ?>
+<?php
 
-<body>
-    <header>
-        <?php include 'config/template/nav.php'; ?>
-    </header>
-    <main>
-        <section class="main-wrapper">
-            <section class="profil-wrapper">
-                <div class="container-profil-menu">
-                    <h2>Votre profil</h2>
-                    <div class="separator-profil-menu"> </div>
-                    <ul class="profil-menu">
-                        <li> <button id="button-info" class="button-profil-menu info-button" type="button">Vos informations</button> </li>
-                        <li> <button id="button-password" class="button-profil-menu changePassword-button" type="button">Changer de mot de passe</button> </li>
-                    </ul>
-                </div>
+include 'config/template/head.php';
+include 'config/template/nav.php';
 
-                <div id="container-profil-info" class="container-profil-info">
-                    <button id="button-update-info" class="button-profil-info">
-                        Modifier
-                        <svg class="icon icon-edit">
-                            <use xlink:href="#icon-edit"></use>
-                        </svg>
-                    </button>
-                    <div class="separator-profil-info"> </div>
+//On ne peut pas accéder à cette page si la session 'user' a été créée.
+// if (!isset($_SESSION['user']) || $_SESSION['user']['role'] == "admin") {
+//     header('location:profil_user.php?connect=forbidden');
+//     exit();
+// }
 
-                    <ul id="profil-info" class="profil-info">
-                        <li>Nom : Dupont</li>
-                        <li>Prénom : Bobby</li>
-                        <li>Pseudo : BobbyLeFooteux</li>
-                        <li>Civilité : Monsieur</li>
-                        <li>E-mail : bobby@gmail.com</li>
-                        <li>Adresse : 1 avenue de Bobby</li>
-                        <li>Code postale: 77000</li>
-                        <li>Ville : Bobby City</li>
-                        <li>N° de téléphone: 06 06 06 06 06</li>
-                    </ul>
+?>
 
-                    <div id="profil-update-info" class="profil-update-info">
-                        <form action="" method="post">
-                            <label for="nom">Nom :</label>
-                            <input type="text" name="nom" id="nom">
+<main>
+    <section class="main-wrapper">
+        <section class="profil-wrapper">
+            <div class="container-profil-menu">
+                <h2>Votre profil</h2>
+                <div class="separator-profil-menu"> </div>
+                <ul class="profil-menu">
+                    <li> <button id="button-info" class="button-profil-menu info-button" type="button">Vos informations</button> </li>
+                    <li> <button id="button-password" class="button-profil-menu changePassword-button" type="button">Changer de mot de passe</button> </li>
+                </ul>
+            </div>
 
-                            <label for="prenom">Prénom :</label>
-                            <input type="text" name="prenom" id="prenom">
+            <div id="container-profil-info" class="container-profil-info">
+                <button id="button-update-info" class="button-profil-info">
+                    Modifier
+                    <svg class="icon icon-edit">
+                        <use xlink:href="#icon-edit"></use>
+                    </svg>
+                </button>
+                <div class="separator-profil-info"> </div>
 
-                            <label for="pseudo">Pseudo</label>
-                            <input type="text" name="pseudo" id="pseudo">
+                <ul id="profil-info" class="profil-info">
+                    <li>Nom : <?php echo $_SESSION['user']['name']; ?></li>
+                    <li>Prénom : <?php echo $_SESSION['user']['firstName']; ?></li>
+                    <li>Pseudo : <?php echo $_SESSION['user']['pseudo']; ?></li>
+                    <li>Civilité : <?php echo $_SESSION['user']['gender']; ?></li>
+                    <li>E-mail : <?php echo $_SESSION['user']['email']; ?></li>
+                    <li>Adresse : <?php echo $_SESSION['user']['address']; ?></li>
+                    <li>Code postale: <?php echo $_SESSION['user']['postalCode']; ?></li>
+                    <li>Ville : <?php echo $_SESSION['user']['city']; ?></li>
+                    <li>N° de téléphone: <?php echo $_SESSION['user']['phone']; ?></li>
+                </ul>
 
-                            <label for="civilite">Civilité :</label>
-                            <select name="civilite" id="civilite">
-                                <option value="monsieur">Monsieur</option>
-                                <option value="madame">Madame</option>
-                                <option value="autre">Autre</option>
-                            </select>
+                <div id="profil-update-info" class="profil-update-info">
+                    <form action="" method="post">
+                        <label for="nom">Nom :</label>
+                        <input type="text" name="nom" id="nom">
 
-                            <label for="email">E-mail :</label>
-                            <input type="email" name="email" id="email">
+                        <label for="prenom">Prénom :</label>
+                        <input type="text" name="prenom" id="prenom">
 
-                            <label for="adresse">Adresse :</label>
-                            <input type="text" name="adresse" id="adresse">
+                        <label for="pseudo">Pseudo</label>
+                        <input type="text" name="pseudo" id="pseudo">
 
-                            <label for="code_postal">Code postal :</label>
-                            <input type="number" name="code_postal" id="code_postal">
+                        <label for="civilite">Civilité :</label>
+                        <select name="civilite" id="civilite">
+                            <option value="monsieur">Monsieur</option>
+                            <option value="madame">Madame</option>
+                            <option value="autre">Autre</option>
+                        </select>
 
-                            <label for="ville">Ville :</label>
-                            <input type="text" name="ville" id="ville">
-
-                            <label for="tel">N° de téléphone :</label>
-                            <input type="tel" name="tel" id="tel">
-
-
-                            <button class="form-submit-button button-update-info" type="submit" value="Enregistrer" name="envoyer"></button>
-                        </form>
-                    </div>
-                </div>
-
-                <div id="container-password-forget" class="container-password-forget">
-                    <h2 class="form-title">MOT DE PASSE OUBLIE</h2>
-
-                    <form action="" method="POST">
-                        <label for="email">E-mail</label>
+                        <label for="email">E-mail :</label>
                         <input type="email" name="email" id="email">
-                        <input class="form-submit-button" type="submit" value="Envoyer" name="envoyer">
+
+                        <label for="adresse">Adresse :</label>
+                        <input type="text" name="adresse" id="adresse">
+
+                        <label for="code_postal">Code postal :</label>
+                        <input type="number" name="code_postal" id="code_postal">
+
+                        <label for="ville">Ville :</label>
+                        <input type="text" name="ville" id="ville">
+
+                        <label for="tel">N° de téléphone :</label>
+                        <input type="tel" name="tel" id="tel">
+
+
+                        <button class="form-submit-button button-update-info" type="submit" value="Enregistrer" name="envoyer"></button>
                     </form>
                 </div>
-            </section>
+            </div>
+
+            <div id="container-password-forget" class="container-password-forget">
+                <h2 class="form-title">MOT DE PASSE OUBLIE</h2>
+
+                <form action="" method="POST">
+                    <label for="email">E-mail</label>
+                    <input type="email" name="email" id="email">
+                    <input class="form-submit-button" type="submit" value="Modifier" name="modifier">
+                </form>
+            </div>
         </section>
-    </main>
-    <footer>
-        <?php include 'config/template/footer.php'; ?>
-    </footer>
-    <script src="asset/script/script-pageUser.js"></script>
+    </section>
+</main>
+<footer>
+    <?php include 'config/template/footer.php'; ?>
+</footer>
+<script src="asset/script/script-pageUser.js"></script>
 </body>
 
 </html>
