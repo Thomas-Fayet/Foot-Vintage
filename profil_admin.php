@@ -20,7 +20,7 @@ $products = $DB->query('SELECT * FROM product');
     <section class="main-wrapper">
         <h2 class="profil-title">ESPACE D'ADMINISTRATION</h2>
 
-        <span>Choix du produit à modifier :</span>
+        <p class="title-admin-panel">Choix du produit à modifier :</p>
 
         <ul class="profil-container">
             <?php foreach ($products as $product) : ?>

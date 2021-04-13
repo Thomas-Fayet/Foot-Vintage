@@ -21,8 +21,10 @@ include 'config/template/nav.php';?>
         <h2>Votre Panier</h2>
 
         <?php if (!isset($_SESSION['user'])) { ?> <!-- L'utilisateur doit se connecter s'il veut accéder au panier -->
-            <a class="form-submit-button" href="inscription.php">S'inscrire</a><br>
-            <a class="form-submit-button" href="login.php">Se connecter</a>
+            <div class="form-button-container">
+                <a  class="form-submit-button" href="inscription.php">S'inscrire</a><br>
+                <a  class="form-submit-button" href="login.php">Se connecter</a>
+            </div>
         <?php } else {
 
             $ids = array_keys($_SESSION['basket']); // permet de récupérer les clés de la session basket, dans notre cas les id.
@@ -52,13 +54,13 @@ include 'config/template/nav.php';?>
                                 <span class="product-title-basket"><?= $product['name_product']; ?></span>
                                 <span class="product-size-basket">Taille : <?= $product['size_product']; ?></span>
                             </div>
-                            <span class="basket-product-quantity"><input class="quantity-product" id="quantity-product-<?= $product['id_product']; ?>" type="text" name="basket[quantity][<?= $product['id_product']; ?>]" value="<?= $_SESSION['basket'][$product['id_product']]; ?>"></span>
+                            <span class="basket-product-quantity"><input class="quantity-product" id="quantity-product-<?= $product['id_product']; ?>" type="number" name="basket[quantity][<?= $product['id_product']; ?>]" value="<?= $_SESSION['basket'][$product['id_product']]; ?>" required></span>
                             <span class="basket-product-price"><?= number_format($product['price_product'], 2, ',', ' ')  ?> €</span>
                             <a class="basket-button" id="delete-product-basket" href="basket.php?del=<?= $product['id_product']; ?>">X</a>
                         </div>
-                    </div>
-                    
+                    </div>   
                 <?php endforeach; ?>
+
                 <span class="basket-total">TOTAL : <?= number_format($basket->price_total(), 2, ',', ' ') ?> €</span>
                 <input id="actualise-basket" type="submit" value="recalculer">
                 </form>

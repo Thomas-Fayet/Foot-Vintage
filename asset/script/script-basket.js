@@ -21,4 +21,8 @@ for (let i = 0; i < quantityProduct.length; i++) {
     });
 }
 
+// if (element.value == ""){
+//     element.value = 1;
+// }
+
 

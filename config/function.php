@@ -78,13 +78,18 @@ class basket {
 
         if (empty($ids)) {
             $products = array(); 
-         } else {
+        } else {
             $products = $this -> DB -> query('SELECT id_product, price_product FROM product WHERE id_product IN ('.implode(',',$ids).')'); // implode permet de récupérer les ids de manière dynamique et les séparer par une virgule.
-         }
-         foreach ($products as $product){
-             $total += $product ['price_product'] * $_SESSION['basket'][$product['id_product']];
-         }
-         return $total;
+        }
+        
+        foreach ($products as $product){
+            if ($_SESSION['basket'][$product['id_product']] == ""){
+                $total = 0;
+            } else {
+                $total += $product ['price_product'] * $_SESSION['basket'][$product['id_product']];
+            }
+        }
+        return $total;
     }
 
     // Création de la fonction qui va nous permettre d'ajouter un produit

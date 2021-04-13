@@ -949,9 +949,12 @@ span {
 
 .profil-container {
   margin: 20px 0 100px 0;
-  border-top: 1px solid black;
-  padding-top: 30px;
   list-style: none;
+}
+
+.admin-panel{
+  width:fit-content;
+  margin:0 auto;
 }
 
 .admin-panel a {
@@ -995,12 +998,22 @@ span {
   cursor: pointer;
 }
 
+.title-admin-panel{
+  border-top: 1px solid black;
+  padding-top:20px;
+}
+
 /* ------------------- RESPONSIVE ------------------- */
 
 @media (min-width: 768px) {
   .profil-container {
     display: flex;
     flex-wrap: wrap;
+  }
+
+  .admin-panel{
+    width:fit-content;
+    margin:0;
   }
 
   .admin-panel a {
@@ -1066,6 +1079,76 @@ select {
 
 .form-message-valid {
   background-color: #01d758;
+}
+
+/* ---------------------------------------------------- ADMIN_PODUCT -------------------------------------------------------*/
+.admin-form {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: auto;
+}
+
+.admin-product-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.admin-product-container h3 {
+  text-align: center;
+  font-family: "Helvetica", sans-serif;
+  grid-area: picture-id;
+}
+
+.form-button-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.admin-submit {
+  grid-area: button;
+}
+
+.form-button-container a {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  color: black;
+}
+
+/* ------------------- RESPONSIVE ------------------- */
+
+@media (min-width: 768px) {
+  .admin-product-container {
+    display: grid;
+    grid-template-areas:
+      "picture picture-id"
+      "picture quantity"
+      "picture price"
+      "picture button";
+    justify-content: flex-start;
+  }
+
+  .admin-product-picture {
+    grid-area: picture;
+    margin: 0 0;
+    margin-right: 50px;
+  }
+
+  .admin-product-quantity {
+    grid-area: quantity;
+  }
+
+  .admin-product-price {
+    grid-area: price;
+  }
+
+  .form-button-container {
+    align-items: flex-start;
+  }
 }
 
 /* ------------------------------------------- FOOTER ------------------------------------------------------*/
@@ -1183,6 +1266,8 @@ footer h2 {
 .admin-form {
   display: flex;
   flex-direction: column;
+  align-items: flex-start;
+  width: auto;
 }
 
 .admin-product-container {
