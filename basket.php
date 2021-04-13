@@ -1,12 +1,13 @@
 <?php 
 
 include 'config/template/head.php';
-include 'config/template/nav.php';
+
 
 if (isset($_GET['del'])) {
     $basket->del_product($_GET['del']);
 }
 
+include 'config/template/nav.php';
 ?>
 
 <main>

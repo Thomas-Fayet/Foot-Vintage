@@ -547,7 +547,7 @@ span {
   display: block;
   border: 1px solid black;
   margin-bottom: 20px;
-  color:black;
+  color: black;
   width: 210px;
   padding: 20px;
   font-size: 16px;
@@ -656,6 +656,7 @@ span {
 
 .basket-form {
   display: flex;
+  flex-direction: column;
   position: relative;
   width: auto;
   border-top: 1px solid black;
@@ -704,6 +705,7 @@ span {
 
 .basket-product-quantity input {
   width: 30px;
+  text-align: center;
 }
 
 .basket-button {
@@ -721,11 +723,10 @@ span {
 }
 
 .basket-total {
-  position: absolute;
   margin-top: 15px;
-  right: 0;
-  top: 100%;
-  transform: translateX(-50%);
+  margin-bottom: 30px;
+  display: flex;
+  justify-content: flex-end;
 }
 
 #actualise-basket {
@@ -752,11 +753,11 @@ span {
     justify-items: center;
     font-weight: bold;
   }
-  
+
   .basket-titles-info {
     grid-column: 2 / 3;
   }
-  
+
   .basket-container {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
@@ -883,11 +884,11 @@ span {
   grid-column: span 2;
   justify-self: center;
   margin-top: 20px;
-  width:260px;
+  width: 260px;
 }
 
 .form-submit-button .button-update-info {
-  width:260px;
+  width: 260px;
 }
 
 .container-password-forget {
@@ -947,21 +948,18 @@ span {
 /* ---------------------------------------------------- PAGE ADMIN -------------------------------------------------------*/
 
 .profil-container {
-  display: flex;
-  flex-direction: column;
   margin: 20px 0 100px 0;
   border-top: 1px solid black;
   padding-top: 30px;
+  list-style: none;
 }
 
-.admin-panel {
-  margin: 0 auto 20px auto;
-  flex-direction: column;
-  width: 280px;
-}
-
-.admin-panel p {
+.admin-panel a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   text-align: center;
+  color: black;
 }
 
 .quantity-price-container {
@@ -970,7 +968,7 @@ span {
   justify-content: center;
 }
 
-.quantity-price-container span{
+.quantity-price-container span {
   margin-right: 15px;
 }
 
@@ -979,6 +977,7 @@ span {
   margin-right: 10px;
   width: 55px;
   text-align: center;
+  appearance: textfield;
 }
 
 .admin-product-list * {
@@ -999,19 +998,13 @@ span {
 /* ------------------- RESPONSIVE ------------------- */
 
 @media (min-width: 768px) {
-  .admin-panel {
-    flex-direction: row;
-    align-items: center;
-    width: auto;
-    margin: 0 0 20px 0;
+  .profil-container {
+    display: flex;
+    flex-wrap: wrap;
   }
 
-  .admin-panel p {
-    margin-right: 10px;
-  }
-
-  .admin-submit {
-    margin: 10px 0 0 0;
+  .admin-panel a {
+    margin: 50px 15px 50px 15px;
   }
 }
 
@@ -1043,10 +1036,12 @@ select {
   cursor: pointer;
   height: 60px;
   width: 180px;
-  margin: 10px auto 0 auto;
+  margin: 50px 0 50px 0;
   font-size: 16px;
   background-color: white;
   text-transform: uppercase;
+  border: 1px solid black;
+  text-decoration: none;
 }
 
 .form-submit-button:hover {
@@ -1180,26 +1175,70 @@ footer h2 {
   }
 }
 
-
 /* ---------------------------------------------------- ADMIN_PODUCT -------------------------------------------------------*/
+.admin-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.admin-product-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.admin-product-container h3 {
+  text-align: center;
+  font-family: "Helvetica", sans-serif;
+  grid-area: picture-id;
+}
+
+.form-button-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.admin-submit {
+  grid-area: button;
+}
+
+.form-button-container a {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  color: black;
+}
+
+/* ------------------- RESPONSIVE ------------------- */
+
 @media (min-width: 768px) {
   .admin-product-container {
     display: grid;
-    grid-template-areas: 
-    "picture quantity"
-    "picture price";
-  }
-  
-  .admin-product-picture {
-    grid-area: picture ;
-  }
-  
-  .admin-product-quantity {
-    grid-area: quantity ;
-  }
-  
-  .admin-product-price {
-    grid-area: price ;
+    grid-template-areas:
+      "picture picture-id"
+      "picture quantity"
+      "picture price"
+      "picture button";
+    justify-content: flex-start;
   }
 
+  .admin-product-picture {
+    grid-area: picture;
+    margin: 0 0;
+    margin-right: 50px;
+  }
+
+  .admin-product-quantity {
+    grid-area: quantity;
+  }
+
+  .admin-product-price {
+    grid-area: price;
+  }
+
+  .form-button-container {
+    align-items: flex-start;
+  }
 }

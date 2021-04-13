@@ -12,15 +12,25 @@ if ($_SESSION['user']['role'] == "membre") {
 }
 
 $id_product = $_GET['id'];
+$content = "";
 $contentUpdateValid = "";
 
 if (isset($_POST['edit']) && $_POST['edit'] == "Modifier") {
     $product_quantity = $_POST['product-quantity'];
     $product_price = $_POST['product-price'];
 
+    if (!filter_var($product_quantity, FILTER_VALIDATE_INT)) {
+        $content .= "Veuillez saisir une quantité valide.<br>";
+    }
+
+    if (!filter_var($product_price, FILTER_VALIDATE_INT)) {
+        $content .= "Veuillez saisir un prix valide.<br>";
+    }
+
     if ($product_price < 0) {
-        echo 'Le prix du produit ne peut pas être inférieur à 0';
-    } else {
+        $content .= 'Le prix du produit ne peut pas être inférieur à 0';
+    }
+    if (empty($content)) {
         $contentUpdateValid .= "Votre produit a bien été mis à jour";
         $queryUpdateProduct = "UPDATE product SET stock_product = ? , price_product = ? WHERE id_product = ?";
         $updateProduct = $DB->db->prepare($queryUpdateProduct);
@@ -46,6 +56,10 @@ $products = $DB->query("SELECT * FROM product WHERE id_product = '$id_product' L
 
         <h2 class="profil-title">ESPACE D'ADMINISTRATION</h2>
 
+        <div class="form-inscription-message form-message-error">
+            <p><?= $content; ?></p>
+        </div>
+
         <div class="form-inscription-message form-message-valid">
             <p><?= $contentUpdateValid; ?></p>
         </div>
@@ -62,6 +76,8 @@ $products = $DB->query("SELECT * FROM product WHERE id_product = '$id_product' L
                                 800px" src="asset/img/<?php echo $product['mainPicture_product']; ?>-450x500.webp" alt="<?php $product['altFrontPicture_product'] ?>">
                     </div>
 
+                    <h3><?php echo $product['name_product']; ?></h3>
+
                     <div class="quantity-price-container admin-product-quantity">
                         <span>Quantité :</span>
                         <div class="admin-button" id="admin-button-quantity-minus">-</div>
@@ -76,14 +92,18 @@ $products = $DB->query("SELECT * FROM product WHERE id_product = '$id_product' L
                         <div class="admin-button" id="admin-button-price-plus">+</div>
                     </div>
 
+                    <input class="form-submit-button admin-submit" type="submit" value="Modifier" name="edit">
 
                 <?php endforeach; ?>
             </div>
 
-            <input class="form-submit-button admin-submit" type="submit" value="Modifier" name="edit">
+            <div class="form-button-container">
+                <a class="form-submit-button" href="profil_admin.php"> retour aux produits </a>
+            </div>
+
         </form>
 
-        <a class="form-submit-button" href="profil_admin.php"> RETOUR AU PRODUIT </a>
+
 
 
 
