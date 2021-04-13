@@ -30,7 +30,6 @@ if (isset($_POST['envoyer']) && $_POST['envoyer'] == "Envoyer") {
 
 
     if (!empty($email) && !empty($password)) {
-
         if (password_verify($password, $rowUserValide['password_user'])) {
             
             if ($email == "admin@gmail.com" && $password == "footvintageadmin") {
@@ -38,7 +37,6 @@ if (isset($_POST['envoyer']) && $_POST['envoyer'] == "Envoyer") {
                 header('location:profil_admin.php');
                 exit();
             }
-
             $_SESSION['user']['id'] = $rowUserValide['id_user'];
             $_SESSION['user']['pseudo'] = $rowUserValide['pseudo_user'];
             $_SESSION['user']['name'] = $rowUserValide['name_user'];
@@ -62,7 +60,7 @@ if (isset($_POST['envoyer']) && $_POST['envoyer'] == "Envoyer") {
 ?>
 
 
-
+<?php include 'config/template/nav.php'; ?>
 
 <?php include 'config/template/nav.php'; ?>
 <main>

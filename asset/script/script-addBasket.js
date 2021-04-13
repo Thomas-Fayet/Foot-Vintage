@@ -9,11 +9,10 @@ addBasket.addEventListener('click', (event) => {
 });
 addBasket.addEventListener('click', () => reqAjax());
 
-
 function  reqAjax() {
     let req = new XMLHttpRequest();
     
-    req.open('GET', 'http://localhost/foot-vintage/addbasket.php?id=1')
+    req.open('GET', addBasket.href)
 
     // req.responseType = 'json';
     

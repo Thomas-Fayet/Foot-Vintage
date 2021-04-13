@@ -32,7 +32,7 @@ if (isset($_GET['del'])) {
         
         foreach ($products as $product) :
         ?>
-            <form action="basket.php" method="post">
+            <form class="basket-form" action="basket.php" method="post">
                 <div class="basket-wrapper">
                     <div class="basket-titles">
                         <span class="basket-titles-info">Nom de l'article</span>
@@ -48,15 +48,15 @@ if (isset($_GET['del'])) {
                             <span class="product-title-basket"><?= $product['name_product']; ?></span>
                             <span class="product-size-basket">Size - XL</span>
                         </div>
-                        <span class="basket-product-quantity"><input type="text" name="basket[quantity][<?= $product['id_product']; ?>]" value="<?= $_SESSION['basket'][$product['id_product']]; ?>"></span>
+                        <span class="basket-product-quantity"><input class="quantity-product" id="quantity-product-<?= $product['id_product']; ?>" type="text" name="basket[quantity][<?= $product['id_product']; ?>]" value="<?= $_SESSION['basket'][$product['id_product']]; ?>"></span>
                         <span class="basket-product-price"><?= number_format($product['price_product'], 2, ',', ' ')  ?> €</span>
                         <a class="basket-button" id="delete-product-basket" href="basket.php?del=<?= $product['id_product']; ?>">X</a>
                     </div>
-
-                    <span class="basket-total">TOTAL : <?= number_format($basket->price_total(), 2, ',', ' ') ?> €</span>
                 </div>
+                
             <?php endforeach; ?>
-            <!-- <input type="submit" value="recalculer"> -->
+            <span class="basket-total">TOTAL : <?= number_format($basket->price_total(), 2, ',', ' ') ?> €</span>
+            <input id="actualise-basket" type="submit" value="recalculer">
             </form>
 
 
@@ -66,6 +66,7 @@ if (isset($_GET['del'])) {
 <footer>
     <?php include 'config/template/footer.php'; ?>
 </footer>
+<script src="asset/script/script-basket.js"></script>
 </body>
 
 </html>

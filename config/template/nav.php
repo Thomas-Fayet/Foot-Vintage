@@ -111,10 +111,14 @@
                             }
                             echo "<a href='deconnexion.php'>Se déconnecter</a>";
                         } else {
-                            echo "<a href='login.php'>Se connecter</a>";
-                            echo "<a href='inscription.php'>S'inscrire</a>";
+                            echo "<a href='profil_user.php'>Profil</a>";
                         }
-                    
+                        echo "<a href='deconnexion.php'>Se déconnecter</a>";
+                    } else {
+                        echo "<a href='login.php'>Se connecter</a>";
+                        echo "<a href='inscription.php'>S'inscrire</a>";
+                    }
+
                     ?>
                     <a href="basket.php">
                         <svg class="icon icon-burger icon-bag">
@@ -133,7 +137,7 @@
         <a class="header-logo-desktop" href="index.php">
             <img src="asset/img/logo-desktop.png" href="index.php">
         </a>
-        
+
         <a class="header-logo-mobile" href="index.php">
             <img src="asset/img/logo-mobile.png" href="index.php">
         </a>
@@ -147,10 +151,14 @@
                     }
                     echo "<a href='deconnexion.php'>Se déconnecter</a>";
                 } else {
-                    echo "<a href='login.php'>Se connecter</a>";
-                    echo "<a href='inscription.php'>S'inscrire</a>";
+                    echo "<a href='profil_user.php'>Profil</a>";
                 }
-                    
+                echo "<a href='deconnexion.php'>Se déconnecter</a>";
+            } else {
+                echo "<a href='login.php'>Se connecter</a>";
+                echo "<a href='inscription.php'>S'inscrire</a>";
+            }
+
             ?>
             <a class="icon-link" href="basket.php">
                 <svg class="icon icon-nav icon-bag">
