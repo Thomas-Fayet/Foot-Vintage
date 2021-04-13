@@ -1,15 +1,23 @@
 <?php
 
 include 'config/template/head.php';
-include 'config/template/nav.php';
 
 //On ne peut pas accéder à cette page si la session 'user' a été créée.
-// if (!isset($_SESSION['user']) || $_SESSION['user']['role'] == "admin") {
-//     header('location:profil_user.php?connect=forbidden');
-//     exit();
-// }
+if (!isset($_SESSION['user'])) {
+    header('location:index.php?connect=forbidden');
+    exit();
+}
 
-?>
+if ($_SESSION['user']['role'] == "admin"){
+    header('location:profil_admin.php');
+    exit();
+}
+
+include 'traitement/modifyPassword.php';
+include 'traitement/modifyInfos.php';
+
+
+include 'config/template/nav.php';?>
 
 <main>
     <section class="main-wrapper">
@@ -31,65 +39,84 @@ include 'config/template/nav.php';
                     </svg>
                 </button>
                 <div class="separator-profil-info"> </div>
+                
+                <div class="form-inscription-message form-message-error">
+                    <p><?= $content; ?></p>
+                </div>
+                <div class="form-inscription-message form-message-valid">
+                    <p><?= $contentUpdateValid; ?></p>
+                </div>
 
                 <ul id="profil-info" class="profil-info">
+                    <li>Pseudo : <?php echo $_SESSION['user']['pseudo']; ?></li>
                     <li>Nom : <?php echo $_SESSION['user']['name']; ?></li>
                     <li>Prénom : <?php echo $_SESSION['user']['firstName']; ?></li>
-                    <li>Pseudo : <?php echo $_SESSION['user']['pseudo']; ?></li>
                     <li>Civilité : <?php echo $_SESSION['user']['gender']; ?></li>
-                    <li>E-mail : <?php echo $_SESSION['user']['email']; ?></li>
                     <li>Adresse : <?php echo $_SESSION['user']['address']; ?></li>
                     <li>Code postale: <?php echo $_SESSION['user']['postalCode']; ?></li>
                     <li>Ville : <?php echo $_SESSION['user']['city']; ?></li>
                     <li>N° de téléphone: <?php echo $_SESSION['user']['phone']; ?></li>
+                    <li>E-mail : <?php echo $_SESSION['user']['email']; ?></li>
                 </ul>
 
                 <div id="profil-update-info" class="profil-update-info">
                     <form action="" method="post">
-                        <label for="nom">Nom :</label>
-                        <input type="text" name="nom" id="nom">
-
-                        <label for="prenom">Prénom :</label>
-                        <input type="text" name="prenom" id="prenom">
 
                         <label for="pseudo">Pseudo</label>
-                        <input type="text" name="pseudo" id="pseudo">
+                        <input type="text" value ="<?php echo $_SESSION['user']['pseudo']; ?>" name="pseudo" id="pseudo" required>
+                        
+                        <label for="name">Nom</label>
+                        <input type="text" value ="<?php echo $_SESSION['user']['name']; ?>" name="name" id="name" required>
 
-                        <label for="civilite">Civilité :</label>
-                        <select name="civilite" id="civilite">
-                            <option value="monsieur">Monsieur</option>
-                            <option value="madame">Madame</option>
-                            <option value="autre">Autre</option>
+                        <label for="firstName">Prénom</label>
+                        <input type="text" value ="<?php echo $_SESSION['user']['firstName']; ?>" name="firstName" id="firstName"required>
+
+                        <label for="gender">Civilité :</label>
+                        <select name="gender" id="gender">
+                            <option selected="selected" value="<?php echo $_SESSION['user']['gender']; ?>"><?php echo $_SESSION['user']['gender']; ?></option>
+                            <?php if ($_SESSION['user']['gender'] == "monsieur"){ ?> 
+                                <?= "<option value='madame'>madame</option>" ?>
+                                <?= "<option value='autre'>autre</option>" ?>
+                            <?php } elseif($_SESSION['user']['gender'] == "madame"){ ?>
+                                <?= "<option value='monsieur'>monsieur</option>" ?>
+                                <?= "<option value='autre'>autre</option>" ?>
+                            <?php } else { ?>
+                                <?= "<option value='monsieur'>monsieur</option>" ?>
+                                <?= "<option value='madame'>madame</option>" ?>
+                            <?php } ?>
                         </select>
 
-                        <label for="email">E-mail :</label>
-                        <input type="email" name="email" id="email">
+                        <label for="address">Adresse</label>
+                        <input type="text" value ="<?php echo $_SESSION['user']['address']; ?>" name="address" id="address" required>
 
-                        <label for="adresse">Adresse :</label>
-                        <input type="text" name="adresse" id="adresse">
+                        <label for="postalCode">Code Postal</label>
+                        <input type="number" value ="<?php echo $_SESSION['user']['postalCode']; ?>" name="postalCode" id="postalCode" required>
 
-                        <label for="code_postal">Code postal :</label>
-                        <input type="number" name="code_postal" id="code_postal">
+                        <label for="city">Ville</label>
+                        <input type="text" value ="<?php echo $_SESSION['user']['city']; ?>" name="city" id="city" required>
 
-                        <label for="ville">Ville :</label>
-                        <input type="text" name="ville" id="ville">
+                        <label for="phone">Téléphone</label>
+                        <input type="text" value ="<?php echo $_SESSION['user']['phone']; ?>" name="phone" id="phone" required>
+                        
+                        <label for="email">Email</label>
+                        <input type="email" value ="<?php echo $_SESSION['user']['email']; ?>" name="email" id="email" required>
 
-                        <label for="tel">N° de téléphone :</label>
-                        <input type="tel" name="tel" id="tel">
-
-
-                        <button class="form-submit-button button-update-info" type="submit" value="Enregistrer" name="envoyer"></button>
+                        <input class="form-submit-button button-update-info" type="submit" value="Modifier les informations" name="modifier_les_informations">
                     </form>
                 </div>
             </div>
 
             <div id="container-password-forget" class="container-password-forget">
-                <h2 class="form-title">MOT DE PASSE OUBLIE</h2>
+                <h2 class="form-title">MODIFIER MOT DE PASSE</h2>
 
                 <form action="" method="POST">
-                    <label for="email">E-mail</label>
-                    <input type="email" name="email" id="email">
-                    <input class="form-submit-button" type="submit" value="Modifier" name="modifier">
+                    <label for="oldPassword">Ancien Mot de passe</label>
+                    <input type="password" name="oldPassword" id="oldPassword">
+                    <label for="newPassword">Nouveau Mot de passe</label>
+                    <input type="password" name="newPassword" id="newPassword">
+                    <label for="confirmNewPassword">Confirmation de mot de passe</label>
+                    <input type="password" name="confirmNewPassword" id="confirmNewPassword">
+                    <input class="form-submit-button button-update-info" type="submit" value="Modifier mot de passe" name="modifier_mot_de_passe">
                 </form>
             </div>
         </section>

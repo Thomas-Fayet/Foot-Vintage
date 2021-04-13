@@ -15,8 +15,6 @@ if (isset($_POST['envoyer']) && $_POST['envoyer'] == "Envoyer") {
 
     extract($_POST); // Convertir les indices en variables
 
-    $password = $_POST['password'];
-
 
     if (mb_strlen($pseudo) < 4 || mb_strlen($pseudo) > 20) { // On vérfie le pseudo
         $content .= "Veuillez saisir un pseudo entre 4 et 20 caractères.<br>";
@@ -26,11 +24,15 @@ if (isset($_POST['envoyer']) && $_POST['envoyer'] == "Envoyer") {
         $content .= "Le pseudo ne peut contenir que des caractères non accentués, des chiffres, tirets et underscores.<br>";
     }
 
-    if ($phone === !10) { // On vérfie le telephone
+    if ((mb_strlen($phone) != 10) || (!filter_var($phone, FILTER_SANITIZE_NUMBER_INT))) { // On vérfie le telephone
         $content .= "Veuillez saisir un numéro de téléphone valide.<br>";
     }
 
-    if (!filter_var($email, FILTER_VALIDATE_EMAIL)) { // On vérfie le mail
+    if (mb_strlen($postalCode) != 5 ) { // On vérfie le code postal
+        $content .= "Veuillez saisir un code postal valide.<br>";
+    }
+
+    if ((!filter_var($email, FILTER_VALIDATE_EMAIL) || (preg_match('#yopmail.com$#', $email)))) { // On vérfie le mail
         $content .= "Veuillez saisir une adresse email valide.<br>";
     }
 
@@ -96,7 +98,7 @@ if (isset($_POST['envoyer']) && $_POST['envoyer'] == "Envoyer") {
                 <p><?= $contentInscriptionValid; ?></p>
             </div>
             <label for="pseudo">Pseudo</label>
-            <input type="text" name="pseudo" id="pseudo">
+            <input type="text" name="pseudo" id="pseudo" required>
             <label for="gender">Civilité</label>
             <select name="gender" id="gender">
                 <option value="monsieur">Monsieur</option>
@@ -104,23 +106,23 @@ if (isset($_POST['envoyer']) && $_POST['envoyer'] == "Envoyer") {
                 <option value="autre">Autre</option>
             </select>
             <label for="name">Nom</label>
-            <input type="text" name="name" id="name">
+            <input type="text" name="name" id="name" required>
             <label for="firstName">Prénom</label>
-            <input type="text" name="firstName" id="firstName">
+            <input type="text" name="firstName" id="firstName" required>
             <label for="address">Adresse</label>
-            <input type="text" name="address" id="address">
+            <input type="text" name="address" id="address" required>
             <label for="postalCode">Code postal</label>
-            <input type="number" name="postalCode" id="postalCode">
+            <input type="number" name="postalCode" id="postalCode" required>
             <label for="city">Ville</label>
-            <input type="text" name="city" id="city">
+            <input type="text" name="city" id="city" required>
             <label for="phone">Numéro de téléphone</label>
-            <input type="tel" name="phone" id="phone">
+            <input type="text" name="phone" id="phone" required>
             <label for="email">E-mail</label>
-            <input type="email" name="email" id="email">
+            <input type="email" name="email" id="email" required>
             <label for="password">Mot de passe</label>
-            <input type="password" name="password" id="password">
+            <input type="password" name="password" id="password" required>
             <label for="confirmPassword">Confirmation de mot de passe</label>
-            <input type="password" name="confirmPassword" id="confirmPassword">
+            <input type="password" name="confirmPassword" id="confirmPassword" required>
             <input class="form-submit-button" type="submit" value="Envoyer" name="envoyer">
         </form>
     </section>

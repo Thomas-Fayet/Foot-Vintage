@@ -3,12 +3,14 @@
 include 'config/template/head.php';
 
 
-$products = $DB->query('SELECT * FROM product');
+$products = $DB->query('SELECT * FROM product WHERE player_product IS NOT NULL');
+
 
 include 'config/template/nav.php';?>
+
 <main>
     <section class="main-wrapper">
-        <h2 class="title-page">LA BOUTIQUE</h2>
+        <h2 class="title-page">JOUEURS</h2>
         <div class="products-wrapper">
             <?php foreach ($products as $product) { ?>
                 <a class="link-product" href="product_page.php?id=<?php echo $product['id_product']; ?>">

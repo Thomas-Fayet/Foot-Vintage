@@ -23,7 +23,6 @@ if (isset($_GET['del'])) {
         <?php
         $ids = array_keys($_SESSION['basket']); // permet de récupérer les clés de la session basket, dans notre cas les id.
 
-        echo ($_SESSION['basket']);
         // S'il n'ya pas de produit dans le panier, alors $products sera un tableau vide et non la requête qui permet d'extraire les ids (évite d'afficher une erreur lorsqu'on supprime les produits du panier)
         if (empty($ids)) {
             $products = array();

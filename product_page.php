@@ -26,18 +26,18 @@ $products = $DB->query("SELECT * FROM product WHERE id_product = '$id_product' L
                                 asset/img/<?php echo $product['mainPicture_product']; ?>-250x300.webp 250w,
                                 asset/img/<?php echo $product['mainPicture_product']; ?>-450x500.webp 450w" sizes="(max-width: 767px) 100px,
                             (max-width: 1439px) 250px,
-                            800px" src="asset/img/<?php echo $product['mainPicture_product']; ?>-450x500.webp" alt="Maillot PSG extérieur 1975/76 devant">
+                            800px" src="asset/img/<?php echo $product['mainPicture_product']; ?>-450x500.webp" alt="<?php echo $product['altFrontPicture_product']; ?>">
                 </div>
 
                 <div class="product-more-container">
                     <img class="product-more-picture" srcset="asset/img/<?php echo $product['frontPicture_product']; ?>-100x120.webp 100w,
-                                asset/img/<?php echo $product['frontPicture_product']; ?>-250x300.webp 250w" sizes="(max-width: 767px) 100px, 250px" src="asset/img/<?php echo $product['frontPicture_product']; ?>-250x300.webp" alt="Maillot PSG extérieur 1975/76 devant">
+                                asset/img/<?php echo $product['frontPicture_product']; ?>-250x300.webp 250w" sizes="(max-width: 767px) 100px, 250px" src="asset/img/<?php echo $product['frontPicture_product']; ?>-250x300.webp" alt="<?php echo $product['altFrontPicture_product']; ?>">
 
                     <img class="product-more-picture" srcset="asset/img/<?php echo $product['sidePicture_product']; ?>-100x120.webp 100w,
-                            asset/img/<?php echo $product['sidePicture_product']; ?>-250x300.webp 250w" sizes="(max-width: 767px) 100px, 250px" src="asset/img/<?php echo $product['sidePicture_product']; ?>-250x300.webp" alt="Maillot PSG extérieur 1975/76 cote">
+                            asset/img/<?php echo $product['sidePicture_product']; ?>-250x300.webp 250w" sizes="(max-width: 767px) 100px, 250px" src="asset/img/<?php echo $product['sidePicture_product']; ?>-250x300.webp" alt="<?php echo $product['altSidePicture_product']; ?>">
 
                     <img class="product-more-picture" srcset="asset/img/<?php echo $product['backPicture_product']; ?>-100x120.webp 100w,
-                            asset/img/<?php echo $product['backPicture_product']; ?>-250x300.webp 250w" sizes="(max-width: 767px) 100px, 250px" src="asset/img/<?php echo $product['backPicture_product']; ?>-250x300.webp" alt="Maillot PSG extérieur 1975/76 dos">
+                            asset/img/<?php echo $product['backPicture_product']; ?>-250x300.webp 250w" sizes="(max-width: 767px) 100px, 250px" src="asset/img/<?php echo $product['backPicture_product']; ?>-250x300.webp" alt="<?php echo $product['altBackPicture_product']; ?>">
                 </div>
 
                 <section class="product-infos-container">

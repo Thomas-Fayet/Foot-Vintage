@@ -1,6 +1,20 @@
 <?php
 
 include 'config/template/head.php';
+
+if (!isset($_SESSION['user'])) {
+    header('location:index.php?connect=forbidden');
+    exit();
+}
+
+if ($_SESSION['user']['role'] == "membre"){
+    header('location:profil_user.php');
+    exit();
+}
+
+$products = $DB->query('SELECT * FROM product');
+
+
 include 'config/template/nav.php';
 
 ?>
@@ -13,8 +27,6 @@ include 'config/template/nav.php';
                 <p>Choix du produit à modifier :</p>
                 <select name="admin-product-list" id="admin-product-list">
                     <option value="maillot1">AS Roma 2012/13 Domicile</option>
-                    <option value="maillot2">Real Madrid 2012/13 Domicile</option>
-                    <option value="maillot3">PSG 2012/13 Domicile</option>
                 </select>
             </li>
             <li class="product-description admin-panel">
@@ -33,7 +45,7 @@ include 'config/template/nav.php';
                     <button class="admin-button" id="admin-button-price-plus">+</button>
                 </div>
             </li>
-            <input class="form-submit-button admin-submit" type="submit" value="Modifier" name="envoyer">
+            <input class="form-submit-button admin-submit" type="submit" value="Envoyer" name="envoyer">
         </ul>
     </section>
 </main>

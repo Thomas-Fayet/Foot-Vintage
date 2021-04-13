@@ -1,11 +1,6 @@
 <?php
 
 include 'config/template/head.php';
-include 'config/template/nav.php';
-
-echo "<pre>";
-print_r($_SESSION);
-echo "</pre>";
 
 //On ne peut pas accéder à cette page si la session 'user' a été créée.
 if (isset($_SESSION['user'])) {
@@ -37,26 +32,27 @@ if (isset($_POST['envoyer']) && $_POST['envoyer'] == "Envoyer") {
     if (!empty($email) && !empty($password)) {
 
         if (password_verify($password, $rowUserValide['password_user'])) {
+            
             if ($email == "admin@gmail.com" && $password == "footvintageadmin") {
                 $_SESSION['user']['role'] = $rowUserValide['role_user'];
                 header('location:profil_admin.php');
                 exit();
-            } else {
-                $_SESSION['user']['id'] = $rowUserValide['id_user'];
-                $_SESSION['user']['pseudo'] = $rowUserValide['pseudo_user'];
-                $_SESSION['user']['name'] = $rowUserValide['name_user'];
-                $_SESSION['user']['firstName'] = $rowUserValide['firstName_user'];
-                $_SESSION['user']['gender'] = $rowUserValide['gender_user'];
-                $_SESSION['user']['address'] = $rowUserValide['address_user'];
-                $_SESSION['user']['postalCode'] = $rowUserValide['postalCode_user'];
-                $_SESSION['user']['city'] = $rowUserValide['city_user'];
-                $_SESSION['user']['phone'] = $rowUserValide['phone_user'];
-                $_SESSION['user']['email'] = $email;
-                $_SESSION['user']['password'] = $password;
-                $_SESSION['user']['role'] = $rowUserValide['role_user'];
-                header('location:profil_user.php');
-                exit();
-            }   
+            }
+
+            $_SESSION['user']['id'] = $rowUserValide['id_user'];
+            $_SESSION['user']['pseudo'] = $rowUserValide['pseudo_user'];
+            $_SESSION['user']['name'] = $rowUserValide['name_user'];
+            $_SESSION['user']['firstName'] = $rowUserValide['firstName_user'];
+            $_SESSION['user']['gender'] = $rowUserValide['gender_user'];
+            $_SESSION['user']['address'] = $rowUserValide['address_user'];
+            $_SESSION['user']['postalCode'] = $rowUserValide['postalCode_user'];
+            $_SESSION['user']['city'] = $rowUserValide['city_user'];
+            $_SESSION['user']['phone'] = $rowUserValide['phone_user'];
+            $_SESSION['user']['email'] = $email;
+            $_SESSION['user']['password'] = $password;
+            $_SESSION['user']['role'] = $rowUserValide['role_user'];
+            header('location:profil_user.php');
+            exit();      
         } else {
             $content .= "Erreur";
         }
@@ -68,7 +64,7 @@ if (isset($_POST['envoyer']) && $_POST['envoyer'] == "Envoyer") {
 
 
 
-
+<?php include 'config/template/nav.php'; ?>
 <main>
     <section class="main-wrapper">
         <h2 class="form-title">CONNEXION</h2>
