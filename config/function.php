@@ -101,3 +101,20 @@ class basket {
         unset($_SESSION['basket'][$product_id]);
     }
 }
+
+
+function check_pseudo($pseudo){
+
+    $DB = new DB(); 
+
+    $stmt = $DB->db->prepare('SELECT pseudo_user FROM user');
+    $stmt -> execute();
+    $results = $stmt -> fetchAll(PDO::FETCH_ASSOC);
+    foreach($results as $result){
+        $check = preg_match('/'.$result['pseudo_user'].'/',$pseudo);
+        if($check == true){
+            break;
+        }
+    }
+    return $check;
+}

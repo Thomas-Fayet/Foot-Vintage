@@ -2,7 +2,7 @@
 
 include 'config/template/head.php';
 
-//On ne peut pas accéder à cette page si la session 'user' a été créée.
+//On ne peut pas accéder à cette page si la session 'user' n'a pas été créée.
 if (!isset($_SESSION['user'])) {
     header('location:index.php?connect=forbidden');
     exit();
