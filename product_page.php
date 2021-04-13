@@ -14,7 +14,15 @@ $products = $DB->query("SELECT * FROM product WHERE id_product = '$id_product' L
         <nav class="breadcrumb">
             <ul>
                 <li><a href="index.php">Home</a></li>
-                <li><a href="">Clubs</a></li>
+                <?php foreach ($products as $product) { ?>
+                    <?php if (!is_null($product['country_product'])){ ?>
+                        <?= "<li><a href='selections.php'>Selections</a></li> "?>
+                    <?php } else if(!is_null($product['club_product'])){?>
+                        <?= "<li><a href='clubs.php'>Clubs</a></li> " ?>
+                    <?php } else { ?>
+                        <?= "<li><a href='joueurs.php'>Joueurs</a></li> " ?>
+                    <?php }
+                } ?>
                 <li><span aria-current="page">Fiche produit</span></li>
             </ul>
         </nav>

@@ -17,11 +17,15 @@ if (isset($_POST['modifier_les_informations']) && $_POST['modifier_les_informati
         $content .= "Le pseudo ne peut contenir que des caractères non accentués, des chiffres, tirets et underscores.<br>";
     }
 
+    if (check_pseudo($pseudo)) { // On vérfie le pseudo unique
+        $content .= "Ce pseudo est déjà utilisé.<br>";
+    }
+
     if ((mb_strlen($phone) != 10) || (!filter_var($phone, FILTER_SANITIZE_NUMBER_INT))) { // On vérfie le telephone
         $content .= "Veuillez saisir un numéro de téléphone valide.<br>";
     }
 
-    if (mb_strlen($postalCode) != 5) { // On vérfie le code postal
+    if ((mb_strlen($postalCode) != 5) || (!filter_var($postalCode, FILTER_VALIDATE_INT))) { // On vérfie le code postal
         $content .= "Veuillez saisir un code postal valide.<br>";
     }
 
